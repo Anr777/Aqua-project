@@ -3,6 +3,8 @@
 
 export function Inicio() {
   return (
-    <div>Inicio</div>
+    <div>
+      <h1>Inicio</h1>
+    </div>
   )
 }
