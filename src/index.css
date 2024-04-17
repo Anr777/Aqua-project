@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navegacion{
+
+    @apply text-black bg-[#069dca];
+}
