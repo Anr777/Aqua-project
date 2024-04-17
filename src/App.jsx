@@ -1,10 +1,9 @@
-import { useState } from 'react'
+import MyRouter from './routers/MyRouter'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className='navegacion'>Hola</div>
+    <MyRouter />
   )
 }
 
