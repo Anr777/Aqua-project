@@ -2,6 +2,6 @@ import Navegacion from "../components/Navegacion"
 
 export function Productos() {
   return (
-    <Navegacion/>
+    <div>Hola Mundo PRODUCTOS</div>
   )
 }

@@ -5,6 +5,6 @@ import Navegacion from "../components/Navegacion"
 
 export function Contactos() {
   return (
-    <Navegacion/>
+    <div>Hola Mundo CONTACOS</div>
   )
 }

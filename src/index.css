@@ -5,13 +5,14 @@
 
 .Navegation{
 
-    @apply flex justify-between mt-10 items-center
+    @apply flex justify-between mt-10 items-center bg-white
 
 }
 .Logo{
-    @apply flex-1
+
 
 }
+
 
 .Listado-nav{
 
@@ -20,8 +21,34 @@
     @apply flex flex-row gap-20 text-2xl
 }
 
+.Active{
+
+    color: white;
+}
+
 .Listado-nav-item{
 
     @apply bg-red-600 p-3
 
 }
+
+
+.Carousel{
+
+    margin: 0 auto;
+    width: 1400px;
+
+}
+
+.contenedor-Card{
+
+    @apply text-white
+
+}
+
+.Card{
+
+    @apply max-w-xs rounded overflow-hidden shadow-lg
+
+}
+

@@ -5,7 +5,7 @@ import Navegacion from "../components/Navegacion"
 
 export function Nosotros() {
   return (
-    <Navegacion/>
+    <div>Hola Mundo NOSOTROS</div>
     
   )
 }
