@@ -1,9 +1,10 @@
+import Navegacion from "../components/Navegacion"
 
 
 
 
 export function Contactos() {
   return (
-    <div>Contactos</div>
+    <Navegacion/>
   )
 }

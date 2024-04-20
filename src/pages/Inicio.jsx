@@ -1,10 +1,9 @@
-
-
+import Navegacion from "../components/Navegacion"
 
 export function Inicio() {
   return (
     <div>
-      <h1>Inicio</h1>
+      <Navegacion/>
     </div>
   )
 }

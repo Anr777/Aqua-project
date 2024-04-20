@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { Contactos, Inicio, Nosotros, Productos } from '../pages'
 
 const MyRouter = () => {
@@ -9,7 +9,7 @@ const MyRouter = () => {
         <Route path='nosotros' element={ <Nosotros />} /> 
         <Route path='productos' element={ <Productos />} /> 
         <Route path='contactos' element={ <Contactos />} /> 
-        <Route path='/*' element={ <Inicio /> } />
+        <Route path='/*' element={ <Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
   )

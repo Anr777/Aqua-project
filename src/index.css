@@ -2,7 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-.navegacion{
 
-    @apply text-black bg-[#069dca];
+.Navegation{
+
+    @apply flex justify-between mt-10 items-center
+
+}
+.Logo{
+    @apply flex-1
+
+}
+
+.Listado-nav{
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    
+    @apply flex flex-row gap-20 text-2xl
+}
+
+.Listado-nav-item{
+
+    @apply bg-red-600 p-3
+
 }
