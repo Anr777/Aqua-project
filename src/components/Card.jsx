@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Card = () => {
-
-    console.log(datos);
+const Card = ({dato}) => {
+  
+  const {img,title,descripcion} = dato;
 
   return (
-    <div className='.Card'>
-      <img src={img} alt="Imagen1" className='w-full' />
+    <div className='Card'>
+      <img src={img} alt="Imagen1" className='w-full flex-1 object-contain' />
       <div className='px-6 py-4'>
-        <div className='font-bold text-xl mb-2 text-white'> {title} </div>
+        <div className='font-bold text-xl mb-2 text-black uppercase'> {title} </div>
         <p className='text-gray-700 text-base'>
             {descripcion}
         </p>

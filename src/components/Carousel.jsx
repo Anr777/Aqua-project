@@ -2,7 +2,7 @@ import React from 'react'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+/*
 const PrevArrow = (props) => (
     <button {...props} className="slick-arrow slick-prev">
       Anterior
@@ -11,8 +11,6 @@ const PrevArrow = (props) => (
   
   // Componente personalizado para el botón de flecha derecha
   const NextArrow = (props) => {
-    console.log({...props})
-
 
     return (
 
@@ -22,7 +20,7 @@ const PrevArrow = (props) => (
 
     ) 
 
-  };
+  };*/
   
 const Carousel = () => {
 
@@ -33,9 +31,10 @@ const Carousel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay:true, 
-    autoplaySpeed:3000,
+    autoplaySpeed:3000
+    /*
     prevArrow: <PrevArrow/>,
-    nextArrow: <NextArrow/>
+    nextArrow: <NextArrow/>*/
   };
 
   return (

@@ -1,6 +1,8 @@
 import Card from "../components/Card"
 import Carousel from "../components/Carousel"
+import Footer from "../components/Footer"
 import Navegacion from "../components/Navegacion"
+
 
 export function Inicio() {
 
@@ -35,24 +37,25 @@ export function Inicio() {
       <Carousel/>
     </div>
 
+    <div className="contenedor-Titulo">
+      <h1 className="Titulo">¡OFERTAS!</h1>
+    </div>
+
     <div className="contenedor-Card">
       {
 
         datos.map((dato)=>
           {
 
-            //console.log(dato);
-
-            return <Card key={dato.id} datos={dato}/>
+            return <Card key={dato.id} dato={dato}/>
 
           }
           
         )
-
-
-
       }
     </div>
+
+    <Footer/>
 
     </>
 
