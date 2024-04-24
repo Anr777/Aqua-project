@@ -59,13 +59,13 @@
 
 .contenedor-Card{
 
-    @apply text-white flex flex-row gap-10 bg-red-700 justify-center py-5
+    @apply text-white flex flex-row gap-10 bg-red-700 justify-center py-5;
 
 }
 
 .Card{
 
-    @apply flex flex-col max-w-xs rounded overflow-hidden shadow-lg bg-white 
+    @apply flex flex-col max-w-xs rounded overflow-hidden shadow-lg bg-white;
 
 }
 
@@ -76,7 +76,7 @@
     padding-left: 90px;
     padding-right: 90px;
     
-    @apply flex flex-row text-white justify-between gap-10
+    @apply flex flex-row text-white justify-between gap-10;
     
 }
 
