@@ -22,7 +22,7 @@ const PrevArrow = (props) => (
 
   };*/
   
-const Carousel = () => {
+const Carousel = ({children}) => {
 
   const settings = {
     dots: true,
@@ -38,14 +38,17 @@ const Carousel = () => {
   };
 
   return (
-    <Slider {...settings}>
-      <div>
-        <img src="24_1.png" alt="Imagen 1" />
-      </div>
-      <div>
-        <img src="bolo.png" alt="Imagen 2" />
-      </div>
-    </Slider>
+    <div className="Carousel">
+      <Slider {...settings}>
+        {/* <div>
+          <img src="24_1.png" alt="Imagen 1" />
+        </div>
+        <div>
+          <img src="bolo.png" alt="Imagen 2" />
+        </div> */}
+        {children}
+      </Slider>
+    </div>
   )
 }
 

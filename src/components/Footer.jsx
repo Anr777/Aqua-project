@@ -21,8 +21,8 @@ const Footer = () => {
             <ul>
                 <li><a href="#">Bidones</a></li>
                 <li><a href="#">Surtidores</a></li>
-                <li><a href="#"></a>Equipo Completo</li>
-                <li><a>Dispensadores Electricos</a></li>
+                <li><a href="#">Equipo Completo</a></li>
+                <li><a href='#'>Dispensadores Electricos</a></li>
             </ul>
           </div>
           <div className='Footer-Contactanos'>

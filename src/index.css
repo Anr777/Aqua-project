@@ -59,7 +59,7 @@
 
 .contenedor-Card{
 
-    @apply text-white flex flex-row gap-10 bg-red-700 justify-center py-5;
+    @apply text-white flex flex-row flex-wrap gap-10 bg-red-700 justify-center py-5;
 
 }
 
@@ -102,5 +102,30 @@
 .Footer-Copyright{
 
     @apply flex justify-center text-white bg-color-1 py-5
+
+}
+
+.Certificacion{
+
+    height: 600px;
+    
+    background-image: url('n.jpg') ;
+    
+   @apply text-white bg-cover bg-no-repeat relative bg-bottom
+
+}
+
+.Contenedor-Star{
+
+    @apply flex flex-row justify-center
+
+}
+
+.Mini-Carousel{
+
+    height: 100%;
+    width: 200px;
+
+    @apply bg-red-700
 
 }

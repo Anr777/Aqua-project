@@ -11,7 +11,7 @@ export const datos = [
     id:1,
     title: 'Anibal',
     descripcion: 'Mancilla Diaz',
-    img:'logo.png',
+    img:'bolo.png',
 
   },
   {
@@ -34,41 +34,49 @@ export const products = [
   {
     id: 1,
     title: 'Agua Jalsuri Bidon 20lt',
+    descripcion: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis exercitationem ipsam necessitatibus animi labore. Sapiente temporibus aspernatur ipsam fuga odit.',
     img: agua1,
   },
   {
     id: 2,
     title: 'Agua San Luis Bidon 20lt',
+    descripcion: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis exercitationem ipsam necessitatibus animi labore. Sapiente temporibus aspernatur ipsam fuga odit.',
     img: agua2,
   },
   {
     id: 3,
     title: 'Valvula o Dispensador Automatico',
+    descripcion: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis exercitationem ipsam necessitatibus animi labore. Sapiente temporibus aspernatur ipsam fuga odit.',
     img: agua3,
   },
   {
     id: 4,
     title: 'Surtidor azul doble para bidon',
+    descripcion: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis exercitationem ipsam necessitatibus animi labore. Sapiente temporibus aspernatur ipsam fuga odit.',
     img: agua4,
   },
   {
     id: 5,
     title: 'Caja de agua Cielo 20lt',
+    descripcion: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis exercitationem ipsam necessitatibus animi labore. Sapiente temporibus aspernatur ipsam fuga odit.',
     img: agua5,
   },
   {
     id: 6,
     title: 'Caja de agua San luis 20lt',
+    descripcion: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis exercitationem ipsam necessitatibus animi labore. Sapiente temporibus aspernatur ipsam fuga odit.',
     img: agua6,
   },
   {
     id: 7,
     title: 'Caja de agua Vida 20lt',
+    descripcion: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis exercitationem ipsam necessitatibus animi labore. Sapiente temporibus aspernatur ipsam fuga odit.',
     img: agua7,
   },
   {
     id: 8,
     title: 'Surditor celeste para bidones de agua 20/21 lts',
+    descripcion: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis exercitationem ipsam necessitatibus animi labore. Sapiente temporibus aspernatur ipsam fuga odit.',
     img: agua8,
   },
 ]
