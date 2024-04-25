@@ -2,130 +2,213 @@
 @tailwind components;
 @tailwind utilities;
 
+/*? quitarle el max-width */
 
-.contenedor-Titulo{
-
-    @apply flex justify-center 
-
-}
-
-.Titulo{
-
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-    @apply  text-white text-5xl py-5;
-
-}
-
-.Navegation{
-
-    padding-left: 90px;
-    padding-right: 90px;
-
-    @apply flex justify-between mt-10 items-center bg-white py-5;
-
-}
-.Logo{
-
-
+.mycontainer {
+  
+  @apply max-w-screen-2xl mx-auto px-4;
 }
 
 
-.Listado-nav{
+.contenedor-Titulo {
 
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
-    
-    @apply flex flex-row gap-20 text-2xl
+  @apply flex justify-center p-5
 }
 
-.Active{
+.Titulo {
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  @apply  text-5xl py-4 font-semibold text-slate-800;
 
-    color: red;
 }
 
-.Listado-nav-item{
+.Titulo::after {
+  
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 70%; /* O el porcentaje deseado */
+  height: 4px; /* Grosor de la línea */
+  background-color: #3182ce; /* Color azul */
+}
 
-    @apply p-3 rounded-2xl border-solid border-neutral-950 border-2
+.Navegation {
+
+  /* padding-left: 90px;
+  padding-right: 90px; */
+
+  @apply flex justify-between items-center bg-white py-5;
 
 }
 
 
-.Carousel{
 
-    margin: 0 auto;
-    width: 1400px;
+.Listado-nav {
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  @apply flex flex-row gap-20 text-xl 
+}
+
+.Active {
+
+  color: #fff;
+  background-color: #0046c9;
+  border: solid 2px #0046c9;
+  border-radius: 15px;
+  color: #fff;
+  transition: all .5s;
+  font-weight: 600;
+}
+
+
+.Listado-nav-item {
+  
+  @apply rounded-2xl px-3 py-1;
+}
+
+
+/* .Listado-nav li:last-child {
+  background-color: #0046c9;
+  border: solid 2px #0046c9;
+  border-radius: 15px;
+  color: #fff;
+  transition: all .5s;
+} */
+
+.Listado-nav li:hover {
+  background-color: #0046c9;
+  border: solid 2px #0046c9;
+  border-radius: 15px;
+  color: #fff;
+  transition: all .3s;
+}
+
+/* .Listado-nav li:last-child:hover {
+  background-color: #0a378b;
+  border-radius: 15px;
+  color: #cdd0f1;
+} */
+
+.Listado-nav li:hover {
+  color: #fff;
+}
+
+.Carousel {
+
+  margin: 0 auto;
+  width: 1400px;
 
 }
 
-.contenedor-Card{
+.contenedor-Card {
 
-    @apply text-white flex flex-row flex-wrap gap-10 bg-red-700 justify-center py-5;
-
-}
-
-.Card{
-
-    @apply flex flex-col max-w-xs rounded overflow-hidden shadow-lg bg-white;
+  @apply text-white flex flex-row flex-wrap gap-10 justify-center py-5;
 
 }
 
+.Card {
 
-.Contenedor-Columnas{
-
-    
-    padding-left: 90px;
-    padding-right: 90px;
-    
-    @apply flex flex-row text-white justify-between gap-10;
-    
-}
-
-.Contenedor-Columnas h5{
-
-    font-size: 18px;
-    font-weight: bold;
+  @apply flex flex-col max-w-xs rounded overflow-hidden shadow-lg bg-white;
 
 }
 
-.Footer-About p{
+
+.Contenedor-Columnas {
 
 
-    @apply break-words
-}
+  padding-left: 90px;
+  padding-right: 90px;
 
-.Footer-Servicios li a{
-
-    word-wrap: normal;
-
-}
-
-.Footer-Copyright{
-
-    @apply flex justify-center text-white bg-color-1 py-5
+  @apply flex flex-row text-blue-400 justify-between gap-10;
 
 }
 
-.Certificacion{
+.Contenedor-Columnas h5 {
 
-    height: 600px;
-    
-    background-image: url('n.jpg') ;
-    
-   @apply text-white bg-cover bg-no-repeat relative bg-bottom
+  font-size: 18px;
+  font-weight: bold;
 
 }
 
-.Contenedor-Star{
+.Footer-About p {
 
-    @apply flex flex-row justify-center
+
+  @apply break-words
+}
+
+.Footer-Servicios li a {
+
+  word-wrap: normal;
 
 }
 
-.Mini-Carousel{
+.Footer-Copyright {
 
-    height: 100%;
-    width: 200px;
+  @apply flex justify-center text-white bg-color-1 py-5
+}
 
-    @apply bg-red-700
+.Certificacion {
+  width: 100%;
+  height: 600px;
+
+  background-image: url('n.jpg');
+
+  @apply text-white bg-cover bg-no-repeat relative bg-bottom
+}
+
+.Contenedor-Star {
+
+  @apply flex flex-row justify-center
+}
+
+.Mini-Carousel {
+
+  height: 100%;
+  width: 250px;
 
 }
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Swiper Personalizacion */
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+  font-size: 40px;
+  color: #0ad425;
+  font-weight: 900;
+}
+
+.swiper-button-next:after {
+  font-size: 40px;
+  color: #0ad425;
+  font-weight: 900;
+}
+
+.Line-height {
+  line-height: 1;
+}
+

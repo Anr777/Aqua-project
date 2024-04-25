@@ -6,27 +6,33 @@ import agua5 from '../assets/agua5.png'
 import agua6 from '../assets/agua6.png'
 import agua7 from '../assets/agua7.png'
 import agua8 from '../assets/agua8.png'
+
+export const carouselData = [
+  { img: 'bolo.png' },
+  { img: '24_1.png' },
+
+]
 export const datos = [
   {
-    id:1,
+    id: 1,
     title: 'Anibal',
     descripcion: 'Mancilla Diaz',
-    img:'bolo.png',
+    img: 'bolo.png',
 
   },
   {
-    id:2,
+    id: 2,
     title: 'Jeremy',
     descripcion: 'Pacheco Garcia',
-    img:'bolo.png',
-    
+    img: 'bolo.png',
+
   },
   {
-    id:3,
+    id: 3,
     title: 'Jair',
     descripcion: 'Pacheco Garcia',
-    img:'24_1.png',
-    
+    img: '24_1.png',
+
   }
 ]
 
@@ -78,5 +84,20 @@ export const products = [
     title: 'Surditor celeste para bidones de agua 20/21 lts',
     descripcion: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis exercitationem ipsam necessitatibus animi labore. Sapiente temporibus aspernatur ipsam fuga odit.',
     img: agua8,
+  },
+]
+
+export const dataCertificaciones = [
+  {
+    id: 1,
+    title: 'Certificación',
+    description: 'Nuestro productos cuentan con certificaiciones de calidad',
+    button: 'All Clients',
+  },
+  {
+    id: 2,
+    title: 'Registro Sanitario',
+    description: 'Nuestro productos cuentan con certificaiciones de calidad',
+    button: 'All Clients',
   },
 ]

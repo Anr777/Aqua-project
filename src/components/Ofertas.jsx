@@ -1,14 +1,13 @@
-import React from 'react'
 import { datos } from '../data/dataEstatica'
 import Card from './Card'
 import Titulo from './Titulo'
 
-const Ofertas = () => {
+const Ofertas = ({ title }) => {
 
   return (
-    <div className='Ofertas'>
+    <div className='Ofertas mycontainer'>
 
-      <Titulo titulo={'OFERTAS'}/>
+      <Titulo titulo={ title }/>
 
       <div className="contenedor-Card">
           {
@@ -20,6 +19,7 @@ const Ofertas = () => {
           }
       </div>
     </div>
+    
   )
 }
 

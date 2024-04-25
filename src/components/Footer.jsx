@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
@@ -12,17 +12,17 @@ const Footer = () => {
           <div className='Footer-Informacion'>
             <h5>Informacion</h5>
             <ul>
-                <li><a href="#">Contáctanos</a></li>
-                <li><a href="#">Nosotros</a></li>
+                <li><Link to='/contactos'>Contáctanos</Link></li>
+                <li><Link to='/nosotros'>Nosotros</Link></li>
             </ul>
           </div>
           <div className='Footer-Servicios'>
             <h5>Servicios</h5>
             <ul>
-                <li><a href="#">Bidones</a></li>
-                <li><a href="#">Surtidores</a></li>
-                <li><a href="#">Equipo Completo</a></li>
-                <li><a href='#'>Dispensadores Electricos</a></li>
+                <li><Link>Bidones</Link></li>
+                <li><Link>Surtidores</Link></li>
+                <li><Link>Equipo Completo</Link></li>
+                <li><Link>Dispensadores Electricos</Link></li>
             </ul>
           </div>
           <div className='Footer-Contactanos'>

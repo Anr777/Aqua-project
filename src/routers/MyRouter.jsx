@@ -7,7 +7,7 @@ import Navegacion from '../components/Navegacion'
 const MyRouter = () => {
   return (
     <BrowserRouter>
-      <Navegacion/>
+      <Navegacion />
       <Routes>
         <Route path='/' element={ <Inicio />} /> 
         <Route path='nosotros' element={ <Nosotros />} /> 

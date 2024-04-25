@@ -1,56 +1,73 @@
-import Card from "../components/Card"
-import Carousel from "../components/Carousel"
+import { Carousel } from "../components/Carousel"
+// import Carousel from "../components/Carousel"
 import Certificacion from "../components/Certificacion"
 import Footer from "../components/Footer"
+import { IProductos } from "../components/IProductos"
 import Ofertas from "../components/Ofertas"
+import { Testimoniales } from "../components/Testimoniales"
 import Titulo from "../components/Titulo"
 
-import { products } from "../data/dataEstatica"
+
+
+import { carouselData, products } from "../data/dataEstatica"
 
 
 export function Inicio() {
 
   return (
-    <div>
-     
-      <Carousel>
-          <div>
-            <img src="24_1.png" alt="Imagen 1" />
-          </div>
-          <div>
-            <img src="bolo.png" alt="Imagen 2" />
-          </div>
-        </Carousel>
-    
+    <div className="">
 
-    {/**?SECCTION DE OFERTAS */}
-    
-      <Ofertas/>
 
-    {/**?SECCTION DE PRODUCTOS */}
-    <Titulo titulo={'PRODUCTOS'}/>
+      <Carousel carouselData={ carouselData } />
 
-    <div className="contenedor-Card">
-        {
-            products.map((dato)=>
-            {
-                return <Card key={dato.id} dato={dato}/>
-            }
-            )
-        }
+
+
+
+      {/**?SECCTION DE OFERTAS */ }
+
+      <Ofertas title={'!Ofertas!'} />
+
+      {/**?SECCTION DE PRODUCTOS */ }
+      <Titulo titulo={ 'Nuestros Productos' } />
+
+
+
+      <IProductos data={ products } />
+
+      {/**?SECCTION DE CERTIFICACION */ }
+
+
+
+      <div style={{ maxWidth: 'none', marginLeft: 0, marginRight: 0 }}>
+        <Certificacion />
+      </div>
+
+
+
+
+      {/**?SECCTION DE TESTIMONIOS */ }
+      <Titulo titulo={'Ellos Confian en Nosotros'} />
+      <div className="flex">
+        <Testimoniales name="Anibal Mancilla Diaz" ocupation="Ingeniero de Sistemas, Desarrollador de Amazon" 
+          testimonio={`
+          Es una empresa muy buena, cuenta con la calidad y el sabor gaaaaaasssssssssssssssssssssssssssssssssssss
+          la puta famaaaa locooooooooooo
+          `}
+        />
+        <Testimoniales name="Jeremy Pacheco Garcia" ocupation="Ingeniero de Sistemas, Desarrollador de Meta" 
+          testimonio={`
+          Es una empresa muy buena, cuenta con la calidad y el sabor gaaaaaa
+          la puta famaaaa locooooooooooo
+          `}
+        />
+        <Testimoniales name='Emma Mancilla Diaz' ocupation="Ingenieria Ambiental" />
+      </div>
+      {/**?SECCTION DE MAPA(ubicacion) */ }
+
+      {/**?SECCTION DE FOOTER */ }
+      <Footer />
+
     </div>
 
-    {/**?SECCTION DE CERTIFICACION */}
-      <Certificacion/>
-
-    {/**?SECCTION DE TESTIMONIOS */}
-
-    {/**?SECCTION DE MAPA(ubicacion) */}
-
-    {/**?SECCTION DE FOOTER */}
-      <Footer/>
-
-    </div>
-    
   )
 }
