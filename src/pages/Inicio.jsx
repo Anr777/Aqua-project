@@ -3,7 +3,9 @@ import { Carousel } from "../components/Carousel"
 import Certificacion from "../components/Certificacion"
 import Footer from "../components/Footer"
 import { IProductos } from "../components/IProductos"
+import Locales from "../components/Locales"
 import Ofertas from "../components/Ofertas"
+import S_Contactos from "../components/S_Contactos"
 import { Testimoniales } from "../components/Testimoniales"
 import Titulo from "../components/Titulo"
 
@@ -42,9 +44,6 @@ export function Inicio() {
         <Certificacion />
       </div>
 
-
-
-
       {/**?SECCTION DE TESTIMONIOS */ }
       <Titulo titulo={'Ellos Confian en Nosotros'} />
       <div className="flex">
@@ -62,7 +61,15 @@ export function Inicio() {
         />
         <Testimoniales name='Emma Mancilla Diaz' ocupation="Ingenieria Ambiental" />
       </div>
+
+      {/**?SECCTION DE CONTACTOS */ }
+
+      <S_Contactos/>
+      <br />
       {/**?SECCTION DE MAPA(ubicacion) */ }
+
+      <Locales height={600} width={1000}/>
+
 
       {/**?SECCTION DE FOOTER */ }
       <Footer />

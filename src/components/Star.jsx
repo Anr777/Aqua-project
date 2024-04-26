@@ -1,7 +1,4 @@
 
-
-
-
 export function Star( { numStar, ...props } ) {
  
   return (
