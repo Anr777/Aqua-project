@@ -8,7 +8,7 @@ const S_Contactos = () => {
               <h1 className='text-white text-5xl font-bold'>Servicio Delivery Gratuito</h1>
               <p className='text-white '>Hasta su domicilio o dirección de oficina en zonas de cobertura</p>
               <span className='inline-block text-center'>
-                <Button title='CONTACTANOS' background={'bg-white'} clases={''} />
+                <Button title='CONTACTANOS' background={'bg-white'} clases={' border border-red-400  '} />
               </span>
             </div>
             <div>

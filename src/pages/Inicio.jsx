@@ -70,6 +70,8 @@ export function Inicio() {
 
       <Locales height={600} width={1000}/>
 
+      
+
 
       {/**?SECCTION DE FOOTER */ }
       <Footer />
