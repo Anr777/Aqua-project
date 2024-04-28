@@ -1,5 +1,12 @@
 import { Banner } from "../components/Banner"
+import { CardImgNosotros } from "../components/CardImgNosotros"
+import Footer from "../components/Footer"
+import Locales from "../components/Locales"
+import S_Contactos from "../components/S_Contactos"
+import { S_Nosotros } from "../components/S_Nosotros"
+import { Testimoniales } from "../components/Testimoniales"
 import Titulo from "../components/Titulo"
+import { imgNosotros } from "../data/dataEstatica"
 
 
 
@@ -9,27 +16,53 @@ export function Nosotros() {
     <>
       <Banner title={ '| Quienes Somos' } />
 
-      <div className="mycontainer">
-        <div className=" w-[70%] m-auto">
-          <Titulo titulo={'Nosotros'} />
-          <p className="text-center w-[60%] m-auto">Somos distribuidores exclusivos de diferentes marcas como son: AGUA SAN MATEO – AGUA JALSURI - AGUA SAN LUIS. Contamos con más de 20 años de experiencia en el mercado nacional.</p>
-          <div className="flex justify-center items-center gap-12">
-            <div className="flex-col">
-              <div className="mb-4">
-                <h3 className="font-bold text-3xl mb-4">Vision</h3>
-                <p>Llegar al público en general , brindandole un producto de calidad, como manifiesta nuestros certificados ISO. Y lo más importante direccionarnos, hacia la excelencia en la calidad de servicio.</p>
-              </div>
-              <div className="mb-4">
-                <h3 className="font-bold text-3xl mb-4">Mision</h3>
-                <p>Nuestro objetivo es mantenernos siempre en el primer lugar en distribución de bidones y demás valores agregados en sus diferentes formatos. Y sobre todo crear clientes, en la cual nuestro desafío es fidelizarlo y lograr su lealtad. </p>
-              </div>
-            </div>
-            <div className="w-full">
-              <img src="bolo.png" className="w-full h-80 object-cover"/>
-            </div>
-          </div>
-        </div>
+      {/**SECTION NOSOTROS */ }
+
+      <S_Nosotros />
+
+      {/**SECTION Nuestra Empresa(imagenes) */ }
+      <Titulo titulo={ 'Nuestra Empresa' } />
+
+      <div className="flex flex-wrap mycontainer justify-center items-center gap-8">
+        {
+          imgNosotros.map( data => (
+            <CardImgNosotros key={ data.id } { ...data } />
+          ) )
+        }
+
       </div>
+
+      {/**SECTION Testimonio */ }
+      <Titulo titulo={ 'Ellos confian en nosotros' } />
+      <div className="flex">
+        <Testimoniales name="Anibal Mancilla Diaz" ocupation="Ingeniero de Sistemas, Desarrollador de Amazon"
+          testimonio={ `
+          Es una empresa muy buena, cuenta con la calidad y el sabor gaaaaaasssssssssssssssssssssssssssssssssssss
+          la puta famaaaa locooooooooooo
+          `}
+        />
+        <Testimoniales name="Jeremy Pacheco Garcia" ocupation="Ingeniero de Sistemas, Desarrollador de Meta"
+          testimonio={ `
+          Es una empresa muy buena, cuenta con la calidad y el sabor gaaaaaa
+          la puta famaaaa locooooooooooo
+          `}
+        />
+        <Testimoniales name='Emma Mancilla Diaz' ocupation="Ingenieria Ambiental" />
+      </div>
+
+      {/**SECTION Carousel de nuestros clientes */ }
+      <Titulo titulo={ 'Nuestros Clientes' } />
+
+      {/**?SECCTION DE CONTACTOS */ }
+
+      <S_Contactos />
+      <br />
+      {/**?SECCTION DE MAPA(ubicacion) */ }
+
+      <Locales height={ 600 } width={ 1000 } />
+
+      <Footer />
+
     </>
   )
 }

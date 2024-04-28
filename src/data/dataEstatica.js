@@ -1,11 +1,17 @@
-import agua1 from '../assets/agua1.png'
-import agua2 from '../assets/agua2.png'
-import agua3 from '../assets/agua3.png'
-import agua4 from '../assets/agua4.png'
-import agua5 from '../assets/agua5.png'
-import agua6 from '../assets/agua6.png'
-import agua7 from '../assets/agua7.png'
-import agua8 from '../assets/agua8.png'
+import agua1 from '../assets/agua1.png';
+import agua2 from '../assets/agua2.png';
+import agua3 from '../assets/agua3.png';
+import agua4 from '../assets/agua4.png';
+import agua5 from '../assets/agua5.png';
+import agua6 from '../assets/agua6.png';
+import agua7 from '../assets/agua7.png';
+import agua8 from '../assets/agua8.png';
+
+//? SECCION NOSOTROS IMPORT
+import nosotros1 from '../assets/nosotros1.jpg'
+import nosotros2 from '../assets/nosotros2.jpg'
+import nosotros3 from '../assets/nosotros3.jpg'
+import nosotros4 from '../assets/nosotros4.jpg'
 
 export const carouselData = [
   { img: 'bolo.png' },
@@ -100,4 +106,28 @@ export const dataCertificaciones = [
     description: 'Nuestro productos cuentan con certificaiciones de calidad',
     button: 'All Clients',
   },
+]
+
+export const imgNosotros = [
+  {
+    id: 1,
+    img: nosotros1,
+    text: 'Area de Almacen'
+  },
+  {
+    id: 2,
+    img: nosotros2,
+    text: 'Distribucion y Transporte'
+  },
+  {
+    id: 3,
+    img: nosotros3,
+    text: 'Trabajo en Equipo'
+  },
+  {
+    id: 4,
+    img: nosotros4,
+    text: 'Nuestro Personal'
+  },
+
 ]

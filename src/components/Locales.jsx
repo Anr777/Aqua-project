@@ -1,4 +1,3 @@
-import React from 'react'
 import Titulo from './Titulo'
 
 const Locales = ({width,height}) => {
@@ -10,7 +9,7 @@ const Locales = ({width,height}) => {
 
     return (
       <>
-        <Titulo titulo={'!ofertas¡'}/>
+        <Titulo titulo={'Encuentranos!'}/>
         <div dangerouslySetInnerHTML={{ __html: iframeHtml }} className='flex justify-center pt-5 pb-10' />
       </>
   
