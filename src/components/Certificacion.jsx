@@ -1,7 +1,8 @@
-
+import { SwiperSlide } from "swiper/react"
 import { dataCertificaciones } from "../data/dataEstatica"
 import { Carousel } from "./Carousel"
 import { Star } from "./Star"
+import { Button } from "./Button"
 
 const Certificacion = () => {
   return (
@@ -25,9 +26,23 @@ const Certificacion = () => {
                         </div>
                     </div>
                     <div className='Mini-Carousel'>
-                        <Carousel 
-                            carouselObject={ dataCertificaciones }
-                        />
+                        <Carousel>
+                            {
+                                dataCertificaciones.map( data => (
+                                    <SwiperSlide key={data.id}> 
+                                      <div className='bg-red'>
+                                        <div  className='flex flex-col text-black gap-3'>
+                                          <h1 className='font-bold text-xl'>{data.title }</h1>
+                                          <p className='font-extralight Line-height'>{ data.description }</p>
+                                          <Button title={ data.button } 
+                                            clases={'border border-blue-600 rounded-2xl hover:bg-blue-500 hover:text-white'} 
+                                          />
+                                        </div>
+                                      </div>
+                                    </SwiperSlide>
+                                  ))
+                            }
+                        </Carousel>
                     </div>
             </div>
         </div>

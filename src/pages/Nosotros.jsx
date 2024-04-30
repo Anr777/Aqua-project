@@ -1,12 +1,15 @@
+import { SwiperSlide } from "swiper/react"
 import { Banner } from "../components/Banner"
 import { CardImgNosotros } from "../components/CardImgNosotros"
+import { Carousel } from "../components/Carousel"
 import Footer from "../components/Footer"
 import Locales from "../components/Locales"
 import S_Contactos from "../components/S_Contactos"
 import { S_Nosotros } from "../components/S_Nosotros"
 import { Testimoniales } from "../components/Testimoniales"
 import Titulo from "../components/Titulo"
-import { imgNosotros } from "../data/dataEstatica"
+import { imgNosotros,clientes } from "../data/dataEstatica"
+import CarouselClientes from "../components/CarouselClientes"
 
 
 
@@ -53,10 +56,12 @@ export function Nosotros() {
       {/**SECTION Carousel de nuestros clientes */ }
       <Titulo titulo={ 'Nuestros Clientes' } />
 
+      <CarouselClientes/>
+
       {/**?SECCTION DE CONTACTOS */ }
 
       <S_Contactos />
-      <br />
+      
       {/**?SECCTION DE MAPA(ubicacion) */ }
 
       <Locales height={ 600 } width={ 1000 } />

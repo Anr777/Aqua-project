@@ -13,6 +13,18 @@ import nosotros2 from '../assets/nosotros2.jpg'
 import nosotros3 from '../assets/nosotros3.jpg'
 import nosotros4 from '../assets/nosotros4.jpg'
 
+export const clientes = [
+
+  {img: 'banner.png'},
+  {img:'24_1.png'},
+  {img:'bolo.png'},
+  {img:'k.jpg'},
+  {img:'logo.png'},
+  {img:'n.jpg'},
+  {img:'tc-logo.png'},
+  {img:'s.png'}
+]
+
 export const carouselData = [
   { img: 'bolo.png' },
   { img: '24_1.png' },

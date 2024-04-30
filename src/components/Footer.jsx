@@ -6,8 +6,8 @@ const Footer = () => {
       <div className='Contenedor-Columnas'>
           <div className='Footer-About'>
             <img src="logo.png" alt="logo" />
-            <p>Somos distribuidores exclusivos de diferentes marcas y contamos con más de 20 años de experiencia en el mercado nacional.</p>
-            <p>www.bidonesdeagua.com</p>
+            <p className="pt-4">Somos distribuidores exclusivos de diferentes marcas y contamos con más de 20 años de experiencia en el mercado nacional.</p>
+            <p className="leading-9 pt-5">www.bidonesdeagua.com</p>
           </div>
           <div className='Footer-Informacion'>
             <h5>Informacion</h5>
@@ -29,15 +29,15 @@ const Footer = () => {
             <h5>Contáctanos</h5>
             <ul>
                 <li>
-                    <span>Oficina</span>
+                    <h5>Oficina:</h5>
                     <p>Calle Ica #312 San Andres - Ica, Péru</p>
                 </li>
                 <li>
-                    <span>Tienda</span>
+                    <h5>Tienda:</h5>
                     <p>Calle Mogote Grande #103 San Andres - Ica, Péru</p>
                 </li>
-                <li>+51 945 319 118 / 987 654 321</li>
-                <li>ventas@aquasur.com</li>
+                <li><p>+51 945 319 118 / 987 654 321</p></li>
+                <li><p>ventas@aquasur.com</p></li>
             </ul>
           </div>
       </div>

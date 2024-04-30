@@ -1,3 +1,4 @@
+import { SwiperSlide } from "swiper/react"
 import { Carousel } from "../components/Carousel"
 // import Carousel from "../components/Carousel"
 import Certificacion from "../components/Certificacion"
@@ -20,10 +21,27 @@ export function Inicio() {
     <div className="">
 
 
-      <Carousel carouselData={ carouselData } />
-
-
-
+      <Carousel carouselData={ carouselData }>
+        {carouselData ? (carouselData.map( data => (
+          <SwiperSlide key={ data.img }>
+            <img src={ data.img } />
+          </SwiperSlide>
+        ) )) : (
+          carouselObject.map( data => (
+            <SwiperSlide key={data.id}> 
+              <div className='bg-red'>
+                <div  className='flex flex-col text-black gap-3'>
+                  <h1 className='font-bold text-xl'>{data.title }</h1>
+                  <p className='font-extralight Line-height'>{ data.description }</p>
+                  <Button title={ data.button } 
+                    clases={'border border-blue-600 rounded-2xl hover:bg-blue-500 hover:text-white'} 
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+          ))
+        )}
+         </Carousel>
 
       {/**?SECCTION DE OFERTAS */ }
 
