@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import SubMenu from './SubMenu'
 
 const Navegacion = () => {
 
@@ -13,7 +14,7 @@ const Navegacion = () => {
           <ul className='Listado-nav'>
                 <li><NavLink className={({ isActive }) => (isActive ? 'Active' : '') + ' Listado-nav-item'} to="/" >Inicio</NavLink></li>
                 <li><NavLink className={({ isActive }) => (isActive ? 'Active' : '') + ' Listado-nav-item'} to="/nosotros" >Nosotros</NavLink></li>
-                <li><NavLink className={({ isActive }) => (isActive ? 'Active' : '') + ' Listado-nav-item'} to="/productos">Producto</NavLink></li>
+                <li><NavLink className={({ isActive }) => (isActive ? 'Active' : '') + ' Listado-nav-item'} to="/productos"><SubMenu/></NavLink></li>
                 <li><NavLink className={({ isActive }) => (isActive ? 'Active text-red-300' : '') + ' Listado-nav-item'} to="/contactos">Contactos</NavLink></li>
             </ul>
         </div>  
