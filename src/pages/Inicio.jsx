@@ -13,6 +13,7 @@ import Titulo from "../components/Titulo"
 
 
 import { carouselData, products } from "../data/dataEstatica"
+import { Button } from "../components/Button"
 
 
 export function Inicio() {
@@ -27,7 +28,7 @@ export function Inicio() {
             <img src={ data.img } />
           </SwiperSlide>
         ) )) : (
-          carouselObject.map( data => (
+          carouselData.map( data => (
             <SwiperSlide key={data.id}> 
               <div className='bg-red'>
                 <div  className='flex flex-col text-black gap-3'>
