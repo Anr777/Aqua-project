@@ -1,10 +1,14 @@
-import Navegacion from "../components/Navegacion"
-
-
+import { Banner } from "../components/Banner"
+import { Formulario } from "../components/Formulario"
 
 
 export function Contactos() {
   return (
-    <div>Hola Mundo CONTACOS</div>
+    <>
+
+      <Banner/>
+      <Formulario/>
+
+    </>
   )
 }
