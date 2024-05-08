@@ -7,7 +7,7 @@ const datosEnvio = {
     nombre: '',
     apellido: '',
     email:'',
-    telefono:'',
+    telefono: '' ,
     mensaje:''
 };
 
@@ -26,65 +26,117 @@ export const Formulario = () => {
         if (Object.values(formState).some(valor => valor === '')) {
             
             setError('HAY UN INPUT VACIO Y SEXOOOOOOOOOOOOOOOOOOOOOOOO');
+            
+            setTimeout(() => {           
+
+                setError('');
+
+            },3000)
+
             return;
         }
 
+        /* VALIDANDO CORREO ELECTRONICO */
+
+        if (email){
+
+            const validateEmail = (correo)=>{
+                const emailRegex = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
+                return emailRegex.test(correo);
+            }
+
+            if (!validateEmail(email)){
+                
+                setError('CORREO ELECTRONICO NO VALIDO');
+
+                setTimeout(() => {           
+
+                    setError('');
+    
+                },3000)
+
+                return;
+            }
+        }
+
+        /* VALIDANDO EL INPUT TELEFONO */
+        if (!isNaN(parseInt(telefono)) && isFinite(telefono)){
+            
+           
+
+        }else{
+            setError('TELEFONO NO VALIDO');
+
+            setTimeout(() => {           
+
+                setError('');
+
+            },3000)
+            
+            return;
+        }
 
         alert('SEXOOOOOOOOOOO ENVIADO');
 
         setError('');
 
+        /* RESETEA LOS INPUTS DEL FORMULARIO */
         setFormState(datosEnvio);
 
     }
 
-
-   const validacion = ({target}) =>{
+   const onChangeInput = ({target}) =>{
 
         const {name,value} = target;
-        
+
+        console.log(name+ ' ' + value);
+        console.log('*****************');
+
         setFormState({
             ...formState,
             [name] : value
         })
+
+        
+
 
 
    }
 
    useEffect(()=>{
 
-    console.log('ACTIVANDO STATE!!!!!!!!!');
+    // console.log('ACTIVANDO STATE!!!!!!!!!');
 
    },[])
 
    
    useEffect(()=>{
 
-    console.log('ACTIVANDO nombre!!!!!!!!!');
+    // console.log('ACTIVANDO nombre!!!!!!!!!');
 
    },[nombre])
 
    useEffect(()=>{
 
-    console.log('ACTIVANDO apellido!!!!!!!!!');
+    // console.log('ACTIVANDO apellido!!!!!!!!!');
 
    },[apellido])
 
    useEffect(()=>{
 
-    console.log('ACTIVANDO email!!!!!!!!!');
+    // console.log('ACTIVANDO email!!!!!!!!!');
 
    },[email])
 
    useEffect(()=>{
 
-    console.log('ACTIVANDO telefono!!!!!!!!!');
+    // console.log('ACTIVANDO telefono!!!!!!!!!');
 
    },[telefono])
 
    useEffect(()=>{
 
-    console.log('ACTIVANDO mensaje!!!!!!!!!');
+    // console.log('ACTIVANDO mensaje!!!!!!!!!');
 
    },[mensaje])
 
@@ -128,27 +180,27 @@ export const Formulario = () => {
                 <h2>Comunicate con nosotros</h2>
                 <form className="form-box" onSubmit={onSubmit}>
                     <div className="input-box w50">
-                            <input type="text" onChange={validacion} name='nombre' value={nombre}/>
+                            <input type="text" onChange={onChangeInput} name='nombre' value={nombre}/>
                             <span>Nombre</span>
                     </div>
 
                     <div className="input-box w50">
-                            <input type="text" onChange={validacion} name='apellido' value={apellido}/>
+                            <input type="text" onChange={onChangeInput} name='apellido' value={apellido}/>
                             <span>Apellido</span>
                     </div>
 
                     <div className="input-box w50">
-                            <input type="text" onChange={validacion} name='email' value={email}/>
+                            <input type="text" onChange={onChangeInput} name='email' value={email}/>
                             <span>Email</span>
                     </div>
 
                     <div className="input-box w50">
-                            <input type="text" onChange={validacion} name='telefono' value={telefono}/>
+                            <input type="text" onChange={onChangeInput} name='telefono' value={telefono}  />
                             <span>Telefono</span>
                     </div>
 
                     <div className="input-box w100">
-                            <textarea value={mensaje} onChange={validacion} name='mensaje'></textarea>
+                            <textarea value={mensaje} onChange={onChangeInput} name='mensaje'></textarea>
                             <span>Escribe tu mensaje...</span>
                     </div>
 
