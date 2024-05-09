@@ -4,212 +4,226 @@ import '../Formulario.css'
 
 const datosEnvio = {
 
-    nombre: '',
-    apellido: '',
-    email:'',
-    telefono: '' ,
-    mensaje:''
+  nombre: '',
+  apellido: '',
+  email: '',
+  telefono: '',
+  mensaje: ''
 };
 
 export const Formulario = () => {
-    
-    const [formState, setFormState] = useState(datosEnvio);
-    
-    const {nombre, apellido ,email ,telefono,mensaje} = formState;
 
-    const [error, setError] = useState('');
+  const [ formState, setFormState ] = useState( datosEnvio );
 
-    function onSubmit(e){
+  const { nombre, apellido, email, telefono, mensaje } = formState;
 
-        e.preventDefault();
+  const [ error, setError ] = useState( '' );
 
-        if (Object.values(formState).some(valor => valor === '')) {
-            
-            setError('HAY UN INPUT VACIO Y SEXOOOOOOOOOOOOOOOOOOOOOOOO');
-            
-            setTimeout(() => {           
+  console.log(typeof telefono)
+  console.log(telefono.length)
+  console.log('hola mundo')
 
-                setError('');
+  function onSubmit( e ) {
 
-            },3000)
+    e.preventDefault();
 
-            return;
-        }
+    if ( Object.values( formState ).some( valor => valor === '' ) ) {
 
-        /* VALIDANDO CORREO ELECTRONICO */
+      setError( 'HAY UN INPUT VACIO Y SEXOOOOOOOOOOOOOOOOOOOOOOOO' );
 
-        if (email){
+      setTimeout( () => {
 
-            const validateEmail = (correo)=>{
-                const emailRegex = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
-                return emailRegex.test(correo);
-            }
+        setError( '' );
 
-            if (!validateEmail(email)){
-                
-                setError('CORREO ELECTRONICO NO VALIDO');
+      }, 3000 )
 
-                setTimeout(() => {           
-
-                    setError('');
-    
-                },3000)
-
-                return;
-            }
-        }
-
-        /* VALIDANDO EL INPUT TELEFONO */
-        if (!isNaN(parseInt(telefono)) && isFinite(telefono)){
-            
-           
-
-        }else{
-            setError('TELEFONO NO VALIDO');
-
-            setTimeout(() => {           
-
-                setError('');
-
-            },3000)
-            
-            return;
-        }
-
-        alert('SEXOOOOOOOOOOO ENVIADO');
-
-        setError('');
-
-        /* RESETEA LOS INPUTS DEL FORMULARIO */
-        setFormState(datosEnvio);
-
+      return;
     }
 
-   const onChangeInput = ({target}) =>{
+    /* VALIDANDO CORREO ELECTRONICO */
 
-        const {name,value} = target;
+    if ( email ) {
 
-        console.log(name+ ' ' + value);
-        console.log('*****************');
+      const validateEmail = ( correo ) => {
+        const emailRegex = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
+        return emailRegex.test( correo );
+      }
 
-        setFormState({
-            ...formState,
-            [name] : value
-        })
+      if ( !validateEmail( email ) ) {
 
-        
+        setError( 'CORREO ELECTRONICO NO VALIDO' );
 
+        setTimeout( () => {
 
+          setError( '' );
 
-   }
+        }, 3000 )
 
-   useEffect(()=>{
+        return;
+      }
+    }
 
-    // console.log('ACTIVANDO STATE!!!!!!!!!');
+    /* VALIDANDO EL INPUT TELEFONO */
+    if ( !isNaN( parseInt( telefono ) ) && isFinite( telefono ) && (telefono.length >= 9) ); 
 
-   },[])
+    else if ( Number(telefono) < 0 ) {
+      setError( 'Telefono no admite numeros negativos' );
+      setTimeout( () => {
+        setError( '' );
+      }, 3000 )
+      return;
+    }
 
-   
-   useEffect(()=>{
+    else if ( isFinite(telefono) && telefono.length < 9 && telefono.length > 0 ) {
+      setError( 'Telefono necesita tener al menos 9 caracteres o numeros' );
+      setTimeout( () => {
+        setError( '' );
+      }, 3000 )
 
-    // console.log('ACTIVANDO nombre!!!!!!!!!');
+      return;
+    } else {
+      setError( 'TELEFONO NO VALIDO' );
 
-   },[nombre])
+      setTimeout( () => {
 
-   useEffect(()=>{
+        setError( '' );
 
-    // console.log('ACTIVANDO apellido!!!!!!!!!');
+      }, 3000 )
 
-   },[apellido])
+      return;
+    }
 
-   useEffect(()=>{
+    alert( 'SEXOOOOOOOOOOO ENVIADO' );
 
-    // console.log('ACTIVANDO email!!!!!!!!!');
+    setError( '' );
 
-   },[email])
+    /* RESETEA LOS INPUTS DEL FORMULARIO */
+    setFormState( datosEnvio );
 
-   useEffect(()=>{
+  }
 
-    // console.log('ACTIVANDO telefono!!!!!!!!!');
+  const onChangeInput = ( { target } ) => {
 
-   },[telefono])
+    const { name, value } = target;
 
-   useEffect(()=>{
+    console.log( name + ' ' + value );
+    console.log( '*****************' );
 
-    // console.log('ACTIVANDO mensaje!!!!!!!!!');
+    setFormState( {
+      ...formState,
+      [ name ]: value
+    } )
 
-   },[mensaje])
+  }
+
+//   useEffect( () => {
+// 
+//     console.log('ACTIVANDO STATE!!!!!!!!!');
+// 
+//   }, [] )
+// 
+// 
+//   useEffect( () => {
+// 
+//     console.log('ACTIVANDO nombre!!!!!!!!!');
+// 
+//   }, [ nombre ] )
+// 
+//   useEffect( () => {
+// 
+//     console.log('ACTIVANDO apellido!!!!!!!!!');
+// 
+//   }, [ apellido ] )
+// 
+//   useEffect( () => {
+// 
+//     console.log('ACTIVANDO email!!!!!!!!!');
+// 
+//   }, [ email ] )
+// 
+//   useEffect( () => {
+// 
+//     console.log('ACTIVANDO telefono!!!!!!!!!');
+// 
+//   }, [ telefono ] )
+// 
+//   useEffect( () => {
+// 
+//     console.log('ACTIVANDO mensaje!!!!!!!!!');
+// 
+//   }, [ mensaje ] )
 
   return (
 
     <section>
-        <div className="container">
-            <div className="info">
-                <div className="content">
-                    <h2>Información de contacto</h2>
-                    
-                    <div className="info-text">
-                            <div className="item">
-                                <span className="fas fa-map-marker-alt"></span>
-                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloremque neque.</span>
-                            </div>
+      <div className="container">
+        <div className="info">
+          <div className="content">
+            <button onClick={ () => console.log('button activado')}>probando</button>
+            <h2>Información de contacto</h2>
 
-                            <div className="item">
-                                <span className="fas fa-envelope"></span>
-                                <span>loremimpsum@gmail.com</span>
-                            </div>
+            <div className="info-text">
+              <div className="item">
+                <span className="fas fa-map-marker-alt"></span>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloremque neque.</span>
+              </div>
 
-                            <div className="item">
-                                <span className="fas fa-phone"></span>
-                                <span>+00 123 456</span>
-                            </div>
-                    </div>
-                </div>
+              <div className="item">
+                <span className="fas fa-envelope"></span>
+                <span>loremimpsum@gmail.com</span>
+              </div>
 
-                <div className="sociales">
-                    <a href=""><span className="fab fa-facebook-f"></span></a>
-                    <a href=""><span className="fab fa-twitter"></span></a>
-                    <a href=""><span className="fab fa-instagram"></span></a>
-                    <a href=""><span className="fab fa-youtube"></span></a>
-                    <a href=""><span className="fab fa-google"></span></a>
-                </div>
+              <div className="item">
+                <span className="fas fa-phone"></span>
+                <span>+00 123 456</span>
+              </div>
             </div>
-                       
-            <div className="form">
-                {error && <div className='bg-red-500 text-white p-2 font-bold'> {error}  </div> }
-                <h2>Comunicate con nosotros</h2>
-                <form className="form-box" onSubmit={onSubmit}>
-                    <div className="input-box w50">
-                            <input type="text" onChange={onChangeInput} name='nombre' value={nombre}/>
-                            <span>Nombre</span>
-                    </div>
+          </div>
 
-                    <div className="input-box w50">
-                            <input type="text" onChange={onChangeInput} name='apellido' value={apellido}/>
-                            <span>Apellido</span>
-                    </div>
-
-                    <div className="input-box w50">
-                            <input type="text" onChange={onChangeInput} name='email' value={email}/>
-                            <span>Email</span>
-                    </div>
-
-                    <div className="input-box w50">
-                            <input type="text" onChange={onChangeInput} name='telefono' value={telefono}  />
-                            <span>Telefono</span>
-                    </div>
-
-                    <div className="input-box w100">
-                            <textarea value={mensaje} onChange={onChangeInput} name='mensaje'></textarea>
-                            <span>Escribe tu mensaje...</span>
-                    </div>
-
-                    <div className="input-box w100 btn">
-                            <input type="submit" value="Enviar"/>
-                    </div>
-                </form>
-            </div>
+          <div className="sociales">
+            <a href=""><span className="fab fa-facebook-f"></span></a>
+            <a href=""><span className="fab fa-twitter"></span></a>
+            <a href=""><span className="fab fa-instagram"></span></a>
+            <a href=""><span className="fab fa-youtube"></span></a>
+            <a href=""><span className="fab fa-google"></span></a>
+          </div>
         </div>
+
+        <div className="form">
+          { error && <div className='bg-red-500 text-white p-2 font-bold'> { error }  </div> }
+          <h2>Comunicate con nosotros</h2>
+          <form className="form-box" onSubmit={ onSubmit }>
+            <div className="input-box w50">
+              <input type="text" onChange={ onChangeInput } name='nombre' value={ nombre } />
+              <span>Nombre</span>
+            </div>
+
+            <div className="input-box w50">
+              <input type="text" onChange={ onChangeInput } name='apellido' value={ apellido } />
+              <span>Apellido</span>
+            </div>
+
+            <div className="input-box w50">
+              <input type="text" onChange={ onChangeInput } name='email' value={ email } />
+              <span>Email</span>
+            </div>
+
+            <div className="input-box w50">
+              <input type="text" onChange={ onChangeInput } name='telefono' value={ telefono } />
+              <span>Telefono</span>
+            </div>
+
+            <div className="input-box w100">
+              <textarea value={ mensaje } onChange={ onChangeInput } name='mensaje'></textarea>
+              <span>Escribe tu mensaje...</span>
+            </div>
+
+            <div className="input-box w100 btn">
+              <input type="submit" value="Enviar" />
+            </div>
+          </form>
+        </div>
+      </div>
     </section>
   )
 }
