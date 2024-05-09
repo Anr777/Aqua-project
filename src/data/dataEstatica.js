@@ -14,8 +14,7 @@ import nosotros3 from '../assets/nosotros3.jpg'
 import nosotros4 from '../assets/nosotros4.jpg'
 
 export const clientes = [
-
-  {img: 'banner.png'},
+  {img:'banner.png'},
   {img:'24_1.png'},
   {img:'bolo.png'},
   {img:'k.jpg'},

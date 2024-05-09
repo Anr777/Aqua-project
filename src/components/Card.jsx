@@ -16,8 +16,8 @@ const Card = ({dato}) => {
       </div>
       <div className='px-6 pt-4 pb-2'>
         <Link to={'/productos'}>
-            <span className='inline-block    '>
-                <Button title='Ver Producto' color={'text-white'} clases={'font-semibold mr-2 hover:bg-blue-500 hover:text-white'} 
+            <span className=''>
+                <Button title='Ver Producto' color={'text-white'} clases={'font-semibold mr-2 hover:bg-blue-500 hover:text-white max-sm:w-full'} 
                   background={'bg-gray-400'}
                 />
             </span>

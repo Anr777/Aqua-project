@@ -26,8 +26,8 @@ export const Formulario = () => {
 
   function sendEmail () {
     emailjs
-      .sendForm('service_ah3y3nd', 'template_1435rta', form.current, {
-        publicKey: 'nGISO2UmBwYnVybQl',
+      .sendForm('service_ne2dzfn', 'template_pat02m2', form.current, {
+        publicKey: 'JbzcZsnLK3HoIT3E0',
       })
       .then(
         () => {
