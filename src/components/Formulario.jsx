@@ -1,4 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import '../Formulario.css'
 
 
@@ -14,14 +16,29 @@ const datosEnvio = {
 export const Formulario = () => {
 
   const [ formState, setFormState ] = useState( datosEnvio );
-
+  const form = useRef();
+  
   const { nombre, apellido, email, telefono, mensaje } = formState;
 
   const [ error, setError ] = useState( '' );
 
-  console.log(typeof telefono)
-  console.log(telefono.length)
-  console.log('hola mundo')
+  //? EMAILJS
+
+  function sendEmail () {
+    emailjs
+      .sendForm('service_ah3y3nd', 'template_1435rta', form.current, {
+        publicKey: 'nGISO2UmBwYnVybQl',
+      })
+      .then(
+        () => {
+          alert('Correo enviado ctmr!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  }
+  //?
 
   function onSubmit( e ) {
 
@@ -64,9 +81,9 @@ export const Formulario = () => {
     }
 
     /* VALIDANDO EL INPUT TELEFONO */
-    if ( !isNaN( parseInt( telefono ) ) && isFinite( telefono ) && (telefono.length >= 9) ); 
-
-    else if ( Number(telefono) < 0 ) {
+    if ( !isNaN( parseInt( telefono ) ) && isFinite( telefono ) && (telefono.length >= 9) ) {
+      sendEmail();
+    } else if ( Number(telefono) < 0 ) {
       setError( 'Telefono no admite numeros negativos' );
       setTimeout( () => {
         setError( '' );
@@ -116,50 +133,12 @@ export const Formulario = () => {
 
   }
 
-//   useEffect( () => {
-// 
-//     console.log('ACTIVANDO STATE!!!!!!!!!');
-// 
-//   }, [] )
-// 
-// 
-//   useEffect( () => {
-// 
-//     console.log('ACTIVANDO nombre!!!!!!!!!');
-// 
-//   }, [ nombre ] )
-// 
-//   useEffect( () => {
-// 
-//     console.log('ACTIVANDO apellido!!!!!!!!!');
-// 
-//   }, [ apellido ] )
-// 
-//   useEffect( () => {
-// 
-//     console.log('ACTIVANDO email!!!!!!!!!');
-// 
-//   }, [ email ] )
-// 
-//   useEffect( () => {
-// 
-//     console.log('ACTIVANDO telefono!!!!!!!!!');
-// 
-//   }, [ telefono ] )
-// 
-//   useEffect( () => {
-// 
-//     console.log('ACTIVANDO mensaje!!!!!!!!!');
-// 
-//   }, [ mensaje ] )
-
   return (
 
     <section>
       <div className="container">
         <div className="info">
           <div className="content">
-            <button onClick={ () => console.log('button activado')}>probando</button>
             <h2>Información de contacto</h2>
 
             <div className="info-text">
@@ -192,7 +171,7 @@ export const Formulario = () => {
         <div className="form">
           { error && <div className='bg-red-500 text-white p-2 font-bold'> { error }  </div> }
           <h2>Comunicate con nosotros</h2>
-          <form className="form-box" onSubmit={ onSubmit }>
+          <form className="form-box" onSubmit={ onSubmit } ref={ form }>
             <div className="input-box w50">
               <input type="text" onChange={ onChangeInput } name='nombre' value={ nombre } />
               <span>Nombre</span>
