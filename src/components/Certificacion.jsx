@@ -7,12 +7,12 @@ import { Button } from "./Button"
 const Certificacion = () => {
   return (
         <div className='Certificacion flex items-center '>
-            <div className='flex flex-row absolute left-[15%]'>
-                    <div>
-                        <div>
+            <div className='flex flex-row absolute left-[15%] max-sm:flex-col justify-center items-center '>
+                    <div className="order-last">
+                        <div className="mt-4">
                             <img src="tc-logo.png" alt="tc-logo" height={'300px'} width={'300px'}/>
                         </div>
-                        <div className='text-center mt-5'>
+                        <div className='text-center'>
                             <span className='text-black font-bold text-xl'>BUREAU VERITAS</span>
                             <div className='Contenedor-Star'>
                                 {/* <img src="star.svg" alt="" height={'20px'} width={'20px'}/>
@@ -31,7 +31,7 @@ const Certificacion = () => {
                                 dataCertificaciones.map( data => (
                                     <SwiperSlide key={data.id}> 
                                       <div className='bg-red'>
-                                        <div  className='flex flex-col text-black gap-3'>
+                                        <div  className='flex flex-col text-black gap-3' >
                                           <h1 className='font-bold text-xl'>{data.title }</h1>
                                           <p className='font-extralight Line-height'>{ data.description }</p>
                                           <Button title={ data.button } 

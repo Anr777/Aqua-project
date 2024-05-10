@@ -8,7 +8,7 @@
 /*? quitarle el max-width */
 
 .mycontainer {
-  @apply max-w-screen-2xl mx-auto px-4;
+  @apply max-w-screen-2xl mx-auto px-4 max-sm:px-0;
 }
 
 
@@ -90,7 +90,8 @@
 }
 
 .contenedor-Card {
-  @apply text-white flex flex-row flex-wrap gap-10 justify-center py-5;
+  @apply text-white flex flex-row flex-wrap gap-10 justify-center py-5 
+  max-sm:items-center;
 }
 
 .Card {
@@ -157,7 +158,7 @@
   width: 100%;
   height: 600px;
   background-image: url('../public/n.jpg');
-  @apply text-white bg-cover bg-no-repeat relative bg-bottom
+  @apply text-white bg-cover bg-no-repeat relative bg-bottom 
 }
 
 .Contenedor-Star {
@@ -182,6 +183,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @apply max-sm:mr-0
 }
 
 .swiper-slide img {
