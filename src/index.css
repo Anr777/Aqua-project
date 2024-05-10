@@ -101,7 +101,7 @@
 
 .Contenedor-Columnas {
   border-top: 1px dotted black ;
-  @apply flex flex-row text-blue-400 justify-between gap-10 mx-56 pt-[50px] mb-12  ;
+  @apply flex flex-row text-blue-400 justify-between gap-10 mx-56 pt-[50px] mb-12 max-sm:flex-col  ;
 }
 
 .Contenedor-Columnas h5 {
@@ -218,6 +218,8 @@
   background-image: url('../public/k.jpg');
   height: 600px;
   width: 100%;
+  display: flex;
+  justify-content: center;
 
 }
 

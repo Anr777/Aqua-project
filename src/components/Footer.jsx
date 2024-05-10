@@ -42,7 +42,7 @@ const Footer = () => {
           </div>
       </div>
       <div className='Footer-Copyright'>
-        © 2024 Todos los derechos reservados por Aquasur
+        <p className="text-center">© 2024 Todos los derechos reservados por Aquasur</p>
       </div>
     </footer>
   )

@@ -65,7 +65,7 @@ export function Inicio() {
 
       {/**?SECCTION DE TESTIMONIOS */ }
       <Titulo titulo={'Ellos Confian en Nosotros'} />
-      <div className="flex">
+      <div className="flex max-sm:flex-col">
         <Testimoniales name="Anibal Mancilla Diaz" ocupation="Ingeniero de Sistemas, Desarrollador de Amazon" 
           testimonio={`
           Es una empresa muy buena, cuenta con la calidad y el sabor gaaaaaasssssssssssssssssssssssssssssssssssss
