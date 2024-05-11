@@ -19,7 +19,7 @@ import { Button } from "../components/Button"
 export function Inicio() {
 
   return (
-    <div className="">
+    <div className=" overflow-x-hidden">
 
 
       <Carousel carouselData={ carouselData }>
@@ -65,7 +65,7 @@ export function Inicio() {
 
       {/**?SECCTION DE TESTIMONIOS */ }
       <Titulo titulo={'Ellos Confian en Nosotros'} />
-      <div className="flex max-sm:flex-col">
+      <div className="flex max-sm:flex-col max-sm:py-9 max-sm:px-8">
         <Testimoniales name="Anibal Mancilla Diaz" ocupation="Ingeniero de Sistemas, Desarrollador de Amazon" 
           testimonio={`
           Es una empresa muy buena, cuenta con la calidad y el sabor gaaaaaasssssssssssssssssssssssssssssssssssss

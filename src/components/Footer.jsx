@@ -5,20 +5,20 @@ const Footer = () => {
     <footer className='Footer'>
       <div className='Contenedor-Columnas'>
           <div className='Footer-About'>
-            <img src="logo.png" alt="logo" />
+            <img src="logo.png" alt="logo" className="w-1/2" />
             <p className="pt-4">Somos distribuidores exclusivos de diferentes marcas y contamos con más de 20 años de experiencia en el mercado nacional.</p>
             <p className="leading-9 pt-5">www.bidonesdeagua.com</p>
           </div>
-          <div className='Footer-Informacion'>
+          <div className='Footer-Informacion max-md:justify-center'>
             <h5>Informacion</h5>
-            <ul>
+            <ul className="flex flex-col max-sm:items-center">
                 <li><Link to='/contactos'>Contáctanos</Link></li>
                 <li><Link to='/nosotros'>Nosotros</Link></li>
             </ul>
           </div>
-          <div className='Footer-Servicios'>
+          <div className='Footer-Servicios max-md:justify-center'>
             <h5>Servicios</h5>
-            <ul>
+            <ul className="flex flex-col max-sm:items-center">
                 <li><Link>Bidones</Link></li>
                 <li><Link>Surtidores</Link></li>
                 <li><Link>Equipo Completo</Link></li>
@@ -27,12 +27,12 @@ const Footer = () => {
           </div>
           <div className='Footer-Contactanos'>
             <h5>Contáctanos</h5>
-            <ul>
-                <li>
+            <ul className="flex flex-col max-sm:items-center">
+                <li className="flex flex-col max-sm:items-center">
                     <h5>Oficina:</h5>
                     <p>Calle Ica #312 San Andres - Ica, Péru</p>
                 </li>
-                <li>
+                <li className="flex flex-col max-sm:items-center">
                     <h5>Tienda:</h5>
                     <p>Calle Mogote Grande #103 San Andres - Ica, Péru</p>
                 </li>

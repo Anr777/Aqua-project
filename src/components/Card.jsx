@@ -17,8 +17,8 @@ const Card = ({dato}) => {
       <div className='px-6 pt-4 pb-2'>
         <Link to={'/productos'}>
             <span className=''>
-                <Button title='Ver Producto' color={'text-white'} clases={'font-semibold mr-2 hover:bg-blue-500 hover:text-white max-sm:w-full'} 
-                  background={'bg-gray-400'}
+                <Button title='Ver Producto' color={'text-white'} clases={'font-semibold mr-2 hover: hover:bg-blue-700 text-white max-sm:w-full'} 
+                  background={'bg-blue-500'}
                 />
             </span>
         </Link>

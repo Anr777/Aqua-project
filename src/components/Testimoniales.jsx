@@ -9,7 +9,7 @@ export function Testimoniales({ image, name = 'Anibal Jeremy', ocupation='Ingeni
 <>
   <div className="mycontainer">
     <div className="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">
-      <div className="relative mx-0 mt-4 flex items-center gap-4 overflow-hidden rounded-xl bg-transparent bg-clip-border pt-0 pb-8 text-gray-700 shadow-none">
+      <div className="relative mx-0 mt-4 flex items-center gap-4 overflow-hidden rounded-xl bg-transparent bg-clip-border pt-0 pb-4 text-gray-700 shadow-none">
         <img
           src={ image ? image : 'https://i.pinimg.com/550x/8d/e7/fa/8de7fa2af12330350613ede63532c4fb.jpg' }
           alt="tania andrew"
