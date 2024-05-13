@@ -19,7 +19,7 @@ import { Button } from "../components/Button"
 export function Inicio() {
 
   return (
-    <div className=" overflow-x-hidden">
+    <div className="overflow-x-hidden">
 
 
       <Carousel carouselData={ carouselData }>
@@ -87,10 +87,11 @@ export function Inicio() {
       <br />
       {/**?SECCTION DE MAPA(ubicacion) */ }
 
-      <Locales height={1000} width={1000}/>
+      <Locales height={600} width={1000}/>
 
       {/**?SECCTION DE FOOTER */ }
-      <Footer />
+      
+      
 
     </div>
 

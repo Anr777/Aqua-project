@@ -16,11 +16,11 @@ export function Testimoniales({ image, name = 'Anibal Jeremy', ocupation='Ingeni
           className="relative inline-block h-[58px] w-[58px] !rounded-full object-cover object-center"
         />
         <div className="flex w-full flex-col gap-0.5">
-          <div className="flex items-center justify-between">
-            <h5 className="flex-1 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+          <div className="flex">
+            <h5 className="block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
               { name }
             </h5>
-            <div className="5 flex items-center gap-0">
+            <div className="flex items-center">
               <Star numStar={5} height={'20px'} width={'20px'} />
             </div>
           </div>
