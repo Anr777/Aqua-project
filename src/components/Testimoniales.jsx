@@ -17,7 +17,7 @@ export function Testimoniales({ image, name = 'Anibal Jeremy', ocupation='Ingeni
         />
         <div className="flex w-full flex-col gap-0.5">
           <div className="flex">
-            <h5 className="block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+            <h5 className="flex-1 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
               { name }
             </h5>
             <div className="flex items-center">
