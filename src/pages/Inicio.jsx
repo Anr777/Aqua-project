@@ -91,7 +91,7 @@ export function Inicio() {
 
       {/**?SECCTION DE FOOTER */ }
       
-      
+      <Footer/>
 
     </div>
 
