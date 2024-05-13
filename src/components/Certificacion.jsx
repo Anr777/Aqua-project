@@ -6,10 +6,10 @@ import { Button } from "./Button"
 
 const Certificacion = () => {
   return (
-        <div className='Certificacion flex items-center '>
-            <div className='flex flex-row absolute left-[15%] max-sm:flex-col justify-center items-center '>
+        <div className='Certificacion flex items-center max-sm:justify-center'>
+            <div className='flex flex-row absolute left-[15%] max-sm:flex-col justify-center items-center max-sm:static'>
                     <div className="order-last">
-                        <div className="mt-4">
+                        <div className="mt-5">
                             <img src="tc-logo.png" alt="tc-logo" height={'300px'} width={'300px'}/>
                         </div>
                         <div className='text-center'>

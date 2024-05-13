@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {clientes} from '../data/dataEstatica';
@@ -9,11 +9,30 @@ import 'swiper/css/navigation';
 
 const CarouselClientes= () => {
 
+
+  const [pantalla,setPantalla] = useState(window.innerWidth);
+  // console.log('PANTALLA INICIAL:', pantalla);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setPantalla(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Limpia el evento cuando el componente se desmonta
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  
+  
+
   return (
     <div className='max-w-screen-xl mx-auto mb-9'>
-      <Swiper 
+      <Swiper
         modules={[Autoplay, Navigation, Pagination]}
-        slidesPerView={3}
+        slidesPerView={pantalla <= 640 ? 1 : 3 }
         centeredSlides={true}
         spaceBetween={30}
         pagination={{
