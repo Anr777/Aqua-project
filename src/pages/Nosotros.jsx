@@ -37,7 +37,9 @@ export function Nosotros() {
 
       {/**SECTION Testimonio */ }
       <Titulo titulo={ 'Ellos confian en nosotros' } />
-      <div className="flex max-sm:flex-col max-sm:py-9 max-sm:px-3 ">
+      {/*flex max-sm:flex-col max-sm:py-9 max-sm:px-3*/}
+      <div className="grid grid-cols-3 max-md:grid-cols-1">
+        {/*COLOCAR EN UN MAP Y GUARDAR LOS DATOS EN UN OBJETO*/}
         <Testimoniales name="Anibal Mancilla Diaz" ocupation="Ingeniero de Sistemas, Desarrollador de Amazon"
           testimonio={ `
           Es una empresa muy buena, cuenta con la calidad y el sabor gaaaaaasssssssssssssssssssssssssssssssssssss
@@ -46,11 +48,13 @@ export function Nosotros() {
         />
         <Testimoniales name="Jeremy Pacheco Garcia" ocupation="Ingeniero de Sistemas, Desarrollador de Meta"
           testimonio={ `
-          Es una empresa muy buena, cuenta con la calidad y el sabor gaaaaaa
+          Es una empresa muy buena, cuuenta con la calidad y el sabor gaaaaaa
           la puta famaaaa locooooooooooo
-          `}
+          `} 
         />
-        <Testimoniales name='Emma Mancilla Diaz' ocupation="Ingenieria Ambiental" />
+        <div className="max-md:col-span-2 max-sm:grid-span-1 justify-self-center">
+          <Testimoniales name='Emma Mancilla Diaz' ocupation="Ingenieria Ambiental"  />
+        </div>
       </div>
 
       {/**SECTION Carousel de nuestros clientes */ }

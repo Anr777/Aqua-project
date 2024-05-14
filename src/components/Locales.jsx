@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 const Locales = ( { width, height } ) => {
 
   const [ pantalla, setPantalla ] = useState(window.innerWidth);
-  console.log(window.innerWidth)
+  
   useEffect( () => {
 
     function changeResize() {
