@@ -173,7 +173,7 @@
 .Certificacion {
   width: 100%;
   height: 600px;
-  background-image: url('../public/n.jpg');
+  background-image: url('/n.jpg');
   @apply text-white bg-cover bg-no-repeat relative bg-bottom 
 }
 
@@ -231,7 +231,7 @@
 
 .Contactos{
 
-  background-image: url('../public/k.jpg');
+  background-image: url('/k.jpg');
   height: 600px;
   width: 100%;
   display: flex;
@@ -242,7 +242,7 @@
 /*? SECTION NOSOTROS */
 
  .Banner{
-  background: url('../public/banner.png');
+  background: url('/banner.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
