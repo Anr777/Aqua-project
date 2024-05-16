@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
-    <footer className='Footer'>
+    <footer className='Footer bg-[#d6e6f5]'>
       <div className='Contenedor-Columnas'>
           <div className='Footer-About'>
             <img src="logo.png" alt="logo" className="w-1/2" />

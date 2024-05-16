@@ -1,4 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -43,6 +45,7 @@
 }
 
 .Navegation {
+  
   @apply flex justify-between items-center bg-white py-5 max-sm:flex-col gap-4;
 
 }
@@ -59,6 +62,7 @@
 }
 
 .Listado-nav-item {
+  font-family: 'Poppins', sans-serif;
   color: black;
   background-color: #fff;
   transition: all .5s;
@@ -74,14 +78,15 @@
 .Active {
 
   color: #fff;
-  background-color: #0046c9;
-  color: #fff;
+  /* background-color: #0046c9; */
+  color: #b8afaf;
   transition: all .5s;
 }
 
 /**? AGREGADO EL 1 DE MAYO*/
 .ListaProduct {
   cursor: pointer;
+  font-family: 'Poppins';
 }
 
 
@@ -237,6 +242,9 @@
 .Contactos{
 
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
 }
 

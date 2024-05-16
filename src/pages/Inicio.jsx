@@ -19,7 +19,7 @@ import { Button } from "../components/Button"
 export function Inicio() {
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden Inicio pt-[130px]">
 
 
       <Carousel carouselData={ carouselData }>

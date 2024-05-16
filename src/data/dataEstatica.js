@@ -142,3 +142,70 @@ export const imgNosotros = [
   },
 
 ]
+
+export const testimoniosClientes = [
+  {
+    id: 1,
+    img: 'https://i.pinimg.com/550x/8d/e7/fa/8de7fa2af12330350613ede63532c4fb.jpg',
+    name: 'Anibal Mancilla Diaz',
+    testimony: 'Es una empresa muy buena, cuenta con la calidad y el sabor gaaaaaasssssssssssssssssssssssssssssssssssss la puta famaaaa locooooooooooo',
+    ocupation: 'Ingenieria de Sistemas'
+  },
+  {
+    id: 2,
+    img: 'https://i.pinimg.com/550x/8d/e7/fa/8de7fa2af12330350613ede63532c4fb.jpg',
+    name: 'Jeremy la Pacheco',
+    testimony: 'Es una empresa muy buena, cuenta con la calidad y el sabor gaaaaaasssssssssssssssssssssssssssssssssssss la puta famaaaa locooooooooooo',
+    ocupation: 'Ingenieria de Sistemas'
+  },
+  {
+    id: 3,
+    img: 'https://i.pinimg.com/550x/8d/e7/fa/8de7fa2af12330350613ede63532c4fb.jpg',
+    name: 'Emma Lola Rodriguez',
+    testimony: 'Es una empresa muy buena, cuenta con la calidad y el sabor gaaaaaasssssssssssssssssssssssssssssssssssss la puta famaaaa locooooooooooo',
+    ocupation: 'Ingenieria de Sistemas'
+  },
+  {
+    id: 4,
+    img: 'https://i.pinimg.com/550x/8d/e7/fa/8de7fa2af12330350613ede63532c4fb.jpg',
+    name: 'Danitsa Arriaga Centella',
+    testimony: 'Es una empresa muy buena, cuenta con la calidad y el sabor gaaaaaasssssssssssssssssssssssssssssssssssss la puta famaaaa locooooooooooo',
+    ocupation: 'Ingenieria de Sistemas'
+  },
+  {
+    id: 5,
+    img: 'https://i.pinimg.com/550x/8d/e7/fa/8de7fa2af12330350613ede63532c4fb.jpg',
+    name: 'Anibal Mancilla Diaz',
+    testimony: 'Es una empresa muy buena, cuenta con la calidad y el sabor gaaaaaasssssssssssssssssssssssssssssssssssss la puta famaaaa locooooooooooo',
+    ocupation: 'Ingenieria de Sistemas'
+  },
+  {
+    id: 6,
+    img: 'https://i.pinimg.com/550x/8d/e7/fa/8de7fa2af12330350613ede63532c4fb.jpg',
+    name: 'Anibal Mancilla Diaz',
+    testimony: 'Es una empresa muy buena, cuenta con la calidad y el sabor gaaaaaasssssssssssssssssssssssssssssssssssss la puta famaaaa locooooooooooo',
+    ocupation: 'Ingenieria de Sistemas'
+  },
+  {
+    id: 7,
+    img: 'https://i.pinimg.com/550x/8d/e7/fa/8de7fa2af12330350613ede63532c4fb.jpg',
+    name: 'Anibal Mancilla Diaz',
+    testimony: 'Es una empresa muy buena, cuenta con la calidad y el sabor gaaaaaasssssssssssssssssssssssssssssssssssss la puta famaaaa locooooooooooo',
+    ocupation: 'Ingenieria de Sistemas'
+  },
+  {
+    id: 8,
+    img: 'https://i.pinimg.com/550x/8d/e7/fa/8de7fa2af12330350613ede63532c4fb.jpg',
+    name: 'Anibal Mancilla Diaz',
+    testimony: 'Es una empresa muy buena, cuenta con la calidad y el sabor gaaaaaasssssssssssssssssssssssssssssssssssss la puta famaaaa locooooooooooo',
+    ocupation: 'Ingenieria de Sistemas'
+  },
+  {
+    id: 9,
+    img: 'https://i.pinimg.com/550x/8d/e7/fa/8de7fa2af12330350613ede63532c4fb.jpg',
+    name: 'Anibal Mancilla Diaz',
+    testimony: 'Es una empresa muy buena, cuenta con la calidad y el sabor gaaaaaasssssssssssssssssssssssssssssssssssss la puta famaaaa locooooooooooo',
+    ocupation: 'Ingenieria de Sistemas'
+  },
+
+]
