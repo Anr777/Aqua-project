@@ -7,7 +7,9 @@ import { IProductos } from "../components/IProductos"
 import Locales from "../components/Locales"
 import Ofertas from "../components/Ofertas"
 import S_Contactos from "../components/S_Contactos"
-import { Testimoniales } from "../components/Testimoniales"
+// import { Testimoniales } from "../components/Testimoniales"
+import {testimoniosClientes } from "../data/dataEstatica"
+import { ContainerTestimoniales } from "../components/ContainerTestimoniales"
 import Titulo from "../components/Titulo"
 
 
@@ -65,7 +67,10 @@ export function Inicio() {
 
       {/**?SECCTION DE TESTIMONIOS */ }
       <Titulo titulo={'Ellos Confian en Nosotros'} />
-      <div className="flex max-sm:flex-col max-sm:py-9 max-sm:px-3">
+
+      <ContainerTestimoniales data={ testimoniosClientes } />
+
+      {/* <div className="flex max-sm:flex-col max-sm:py-9 max-sm:px-3">
         <Testimoniales name="Anibal Mancilla Diaz" ocupation="Ingeniero de Sistemas, Desarrollador de Amazon" 
           testimonio={`
           Es una empresa muy buena, cuenta con la calidad y el sabor gaaaaaasssssssssssssssssssssssssssssssssssss
@@ -79,7 +84,7 @@ export function Inicio() {
           `}
         />
         <Testimoniales name='Emma Mancilla Diaz' ocupation="Ingenieria Ambiental" />
-      </div>
+      </div> */}
 
       {/**?SECCTION DE CONTACTOS */ }
 

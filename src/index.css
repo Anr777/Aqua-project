@@ -45,8 +45,11 @@
 }
 
 .Navegation {
+
+  border-bottom: solid 1px #3b82f6;
   
-  @apply flex justify-between items-center bg-white py-5 max-sm:flex-col gap-4;
+  
+  @apply flex justify-between items-center bg-white py-5 fixed left-0 top-0 w-full shadow-lg z-[999999];
 
 }
 
@@ -57,7 +60,7 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
   @apply flex flex-row gap-20 text-xl 
-  max-sm:flex-col items-center mt-4
+  max-sm:flex-col items-center
 
 }
 
