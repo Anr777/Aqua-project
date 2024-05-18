@@ -19,6 +19,58 @@
   
 }
 
+/*Estilo BurgerNav*/
+
+.nav-icon-5{
+  width: 35px;
+  height: 30px;
+  margin: 10px 10px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+.nav-icon-5 span{
+  background-color:#3b82f6;
+  position: absolute;
+  border-radius: 2px;
+  transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+  width:100%;
+  height: 4px;
+  transition-duration: 500ms
+}
+.nav-icon-5 span:nth-child(1){
+  top:0px;
+  left: 0px;
+}
+.nav-icon-5 span:nth-child(2){
+  top:13px;
+  left: 0px;
+  opacity:1;
+}
+.nav-icon-5 span:nth-child(3){
+  bottom:0px;
+  left: 0px;
+}
+.nav-icon-5:not(.open):hover span:nth-child(1){
+  transform: rotate(-3deg) scaleY(1.1);
+}
+.nav-icon-5:not(.open):hover span:nth-child(2){
+  transform: rotate(3deg) scaleY(1.1);
+}
+.nav-icon-5:not(.open):hover span:nth-child(3){
+  transform: rotate(-4deg) scaleY(1.1);
+}
+.nav-icon-5.open span:nth-child(1){
+  transform: rotate(45deg);
+  top: 13px;
+}
+.nav-icon-5.open span:nth-child(2){
+  opacity:0;
+}
+.nav-icon-5.open span:nth-child(3){
+  transform: rotate(-45deg);
+  top: 13px;
+}
 
 .contenedor-Titulo {
 
@@ -47,21 +99,89 @@
 .Navegation {
 
   border-bottom: solid 1px #3b82f6;
-  
-  
+
   @apply flex justify-between items-center bg-white py-5 fixed left-0 top-0 w-full shadow-lg z-[999999];
 
 }
 
 
-
-.Listado-nav {
+/*Los manda a san putamadre, por defecto */
+.links {
 
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-  @apply flex flex-row gap-20 text-xl 
-  max-sm:flex-col items-center
+  /*NAV RESPONSIVE*/
+  
+  position: absolute;
+  top: -700px;
+  left: -2000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 
+/* 
+  @apply flex flex-row gap-20 text-xl 
+  max-sm:flex-col items-center */
+
+}
+
+.links a{
+  color: black;
+  font-size: 2rem;
+  display: block;
+}
+
+/*Desde este tamaño lo muestra en su posicion inicial*/
+@media (min-width:768px){
+
+.links{
+
+  position: initial;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.links a{
+  
+  
+  font-size: 1.2rem;
+  color: black;
+
+}
+
+}
+
+.activaBurguer{
+
+  width: 100%;
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  top: 30%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  
+}
+
+.Burger{
+
+  display: block;
+
+}
+
+@media (min-width: 768px) {
+
+.Burger{
+  
+  display: none;
+
+}
+}
+
+.activaBurguer a{
+  color: black;
 }
 
 .Listado-nav-item {
@@ -72,7 +192,6 @@
 }
 
 .Listado-nav-item:hover {
-  color: #fff;
   background-color: #0046c9;
   color: #fff;
   transition: all .5s;
@@ -81,8 +200,7 @@
 .Active {
 
   color: #fff;
-  /* background-color: #0046c9; */
-  color: #b8afaf;
+  background-color: #0046c9;
   transition: all .5s;
 }
 
