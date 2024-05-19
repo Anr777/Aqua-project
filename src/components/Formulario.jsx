@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import '../Formulario.css'
+import '../Formulario.css';
+import { toast } from 'react-toastify';
 
 
 const datosEnvio = {
@@ -31,10 +32,12 @@ export const Formulario = () => {
       })
       .then(
         () => {
-          alert('Correo enviado ctmr!');
+          toast.success('Correo enviado ctmr!')
+          // alert('Correo enviado ctmr!');
         },
         (error) => {
           console.log('FAILED...', error.text);
+          toast.error('El correo no se pudo enviar, verifique bien los datos')
         },
       );
   }
@@ -110,7 +113,7 @@ export const Formulario = () => {
       return;
     }
 
-    alert( 'SEXOOOOOOOOOOO ENVIADO' );
+    // alert( 'SEXOOOOOOOOOOO ENVIADO' );
 
     setError( '' );
 

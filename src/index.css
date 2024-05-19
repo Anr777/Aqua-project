@@ -93,22 +93,32 @@
   bottom: 0;
   width: 70%; /* O el porcentaje deseado */
   height: 4px; /* Grosor de la línea */
-  background-color: #3182ce; /* Color azul */
+  /* Color azul */
+  /* background-color: #3182ce;  */
 }
 
 .Navegation {
 
   border-bottom: solid 1px #3b82f6;
 
-  @apply flex justify-between items-center bg-white py-5 fixed left-0 top-0 w-full shadow-lg z-[999999];
+  @apply flex justify-between items-center bg-white py-5 fixed left-0 top-0 w-full h-20 shadow-lg z-[999999];
 
+}
+
+.navegation2 {
+  background-color: rgba(255, 255, 255, .75);
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  touch-action: none;
+  font-family: 'Poppins';
 }
 
 
 /*Los manda a san putamadre, por defecto */
 .links {
 
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Poppins', sans-serif;
 
   /*NAV RESPONSIVE*/
   
@@ -125,36 +135,57 @@
 
 }
 
+/*Logo*/
+.Logo img {
+  position: absolute;
+  top: 11px;
+  left: 0;
+}
+
+
+
 .links a{
-  color: black;
+  color: #605b5b;
   font-size: 2rem;
   display: block;
 }
 
+.links li {
+  margin: 30px;
+}
+
 /*Desde este tamaño lo muestra en su posicion inicial*/
-@media (min-width:768px){
+@media (min-width: 1024px){
 
-.links{
+  .links{
 
-  position: initial;
-  margin: 0;
-  display: flex;
-  gap: 20px;
-}
+    position: initial;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+  }
 
-.links a{
+  .Logo img {
+    top: 11px;
+    left: 0;
+    position: initial;
+
+  }
+
   
-  
-  font-size: 1.2rem;
-  color: black;
+  .links a{
+    
+    
+    font-size: 1.2rem;
+    color: #605b5b;
 
-}
+  }
 
 }
 
 .activaBurguer{
-
   width: 100%;
+  height: 100%;
   display: block;
   position: absolute;
   margin: 0 auto;
@@ -168,41 +199,48 @@
 .Burger{
 
   display: block;
-
-}
-
-@media (min-width: 768px) {
-
-.Burger{
   
-  display: none;
+  top: 11px;
+  position: absolute;
+  right: 11px;
 
 }
+
+@media (min-width: 1024px) {
+
+  .Burger{
+    
+    display: none;
+
+  }
+
+  .Listado-nav-item:hover {
+    background-color: #0046c9;
+    color: #fff;
+    transition: all .5s;
+  }
+  
+  .Active {
+  
+    color: #fff;
+    /* background-color: #0046c9; */
+    transition: all .5s;
+  }
 }
 
 .activaBurguer a{
-  color: black;
+  color: #605b5b;
+  font-weight: 500;
 }
 
 .Listado-nav-item {
   font-family: 'Poppins', sans-serif;
-  color: black;
-  background-color: #fff;
+  color: #605b5b;
+  /* background-color: #fff; */
   transition: all .5s;
 }
 
-.Listado-nav-item:hover {
-  background-color: #0046c9;
-  color: #fff;
-  transition: all .5s;
-}
 
-.Active {
-
-  color: #fff;
-  background-color: #0046c9;
-  transition: all .5s;
-}
 
 /**? AGREGADO EL 1 DE MAYO*/
 .ListaProduct {
@@ -484,3 +522,5 @@
   background-color: white;
   
 }
+
+

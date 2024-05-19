@@ -1,9 +1,13 @@
-import MyRouter from './routers/MyRouter'
+import MyRouter from './routers/MyRouter';
+
 
 function App() {
 
   return (
-    <MyRouter /> 
+    <>
+      <MyRouter /> 
+      
+    </>
   )
 }
 

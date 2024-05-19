@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 import { SubMenu2 } from './SubMenu2';
 import { useState } from 'react';
 import { BurgerButton } from './BurgerButton';
@@ -6,33 +6,49 @@ import { BurgerButton } from './BurgerButton';
 const Navegacion = () => {
 
   const [ clicked, setClicked ] = useState( false );
+
+  const [ openMenu, setOpenMenu ] = useState(false)
   const handleClick = ()=>{
     
     setClicked(!clicked);
     
   }
 
+  function handleClickLinks() {
+    setOpenMenu( prev => !prev );
+    setClicked( false );
+  }
+
   return (
-    <div className='Navegation lg:px-[50px] md:px-[25px] max-md:px-[25px]'  onMouseLeave={ () => setOpenMenu(false) }>
+    <div className={`Navegation lg:px-[50px] md:px-[25px] max-md:px-[25px] ${ clicked ? 'navegation2' : ''}`}  onMouseLeave={ () => setOpenMenu(false) }>
       <div className='Logo'>
         <Link to='/'>
           <img src="logo.png" alt="logo" width={ '270px' } height={ '60px' } />
         </Link>
       </div>
       
-      <div className={`links ${clicked ? 'activaBurguer' : ''}`}>
-          <NavLink onClick={ () => setOpenMenu( false ) } className={ ( { isActive } ) => ( isActive ? 'Active' : '' ) + ' Listado-nav-item' } to="/" >Inicio</NavLink>
+      <ul className={`links ${clicked ? 'activaBurguer' : ''}`}>
+          <li>
+            <NavLink onClick={ handleClickLinks } className={ ( { isActive } ) => ( isActive ? 'Active' : '' ) + ' Listado-nav-item' } to="/" >Inicio</NavLink>
+          </li>
 
-          <NavLink onClick={ () => setOpenMenu( false ) } className={ ( { isActive } ) => ( isActive ? 'Active' : '' ) + ' Listado-nav-item' } to="/nosotros" >Nosotros</NavLink>
+          <li>
+            <NavLink onClick={ handleClickLinks } className={ ( { isActive } ) => ( isActive ? 'Active' : '' ) + ' Listado-nav-item' } to="/nosotros" >Nosotros</NavLink>
+          </li>
 
-          <NavLink onClick={ () => setOpenMenu( false ) } className={ ( { isActive } ) => ( isActive ? 'Active' : '' ) + ' Listado-nav-item' } to="/productos" >Productos</NavLink>
+          <li>
+            <NavLink onClick={ handleClickLinks } className={ ( { isActive } ) => ( isActive ? 'Active' : '' ) + ' Listado-nav-item' } to="/productos" >Productos</NavLink>
+          </li>
 
-          <NavLink onClick={ () => setOpenMenu( false ) } className={ ( { isActive } ) => ( isActive ? 'Active'  : '' ) + ' Listado-nav-item' } to="/contactos">Contactos</NavLink>
-      </div>
+          <li>
+            <NavLink onClick={ handleClickLinks } className={ ( { isActive } ) => ( isActive ? 'Active'  : '' ) + ' Listado-nav-item' } to="/contactos">Contactos</NavLink>
+          </li>
+      </ul>
 
       <div className="Burger">
           <BurgerButton clicked={clicked} handleClick={handleClick}/>
       </div>
+      <Outlet />
   </div>
   )
 }

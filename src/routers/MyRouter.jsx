@@ -15,6 +15,7 @@ const MyRouter = () => {
         <Route path='contactos' element={ <Contactos />} /> 
         <Route path='/*' element={ <Navigate to="/" />} />
       </Routes>
+     
     </BrowserRouter>
   )
 }
