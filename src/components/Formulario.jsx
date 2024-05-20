@@ -126,9 +126,6 @@ export const Formulario = () => {
 
     const { name, value } = target;
 
-    console.log( name + ' ' + value );
-    console.log( '*****************' );
-
     setFormState( {
       ...formState,
       [ name ]: value

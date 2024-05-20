@@ -105,13 +105,24 @@
 
 }
 
+.outlet{
+
+  width: 100%;
+  height: calc(100%-80px);
+
+}
+
 .navegation2 {
   background-color: rgba(255, 255, 255, .75);
+  border-radius: 0 0 80% 0;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(20px);
   touch-action: none;
   font-family: 'Poppins';
+
+  /********/
+  transition: all .5s ease;
 }
 
 
@@ -129,10 +140,9 @@
   margin-right: auto;
   text-align: center;
 
-/* 
-  @apply flex flex-row gap-20 text-xl 
-  max-sm:flex-col items-center */
-
+  /*****/
+  transition: all .5s ease;
+  
 }
 
 /*Logo*/
@@ -142,8 +152,6 @@
   left: 0;
 }
 
-
-
 .links a{
   color: #605b5b;
   font-size: 2rem;
@@ -151,6 +159,7 @@
 }
 
 .links li {
+  
   margin: 30px;
 }
 
@@ -169,7 +178,6 @@
     top: 11px;
     left: 0;
     position: initial;
-
   }
 
   
