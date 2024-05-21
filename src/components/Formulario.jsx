@@ -122,7 +122,7 @@ export const Formulario = () => {
 
   }
 
-  const onChangeInput = ( { target } ) => {
+  const onChangeInput = (  {target}  ) => {
 
     const { name, value } = target;
 
@@ -148,6 +148,9 @@ export const Formulario = () => {
     }
 
   }, []);
+
+
+
 
   return (
 
@@ -187,29 +190,29 @@ export const Formulario = () => {
         <div className="form">
           { error && <div className='bg-red-500 text-white p-2 font-bold'> { error }  </div> }
           <h2>Comunicate con nosotros</h2>
-          <form className="form-box" onSubmit={ onSubmit } ref={ form }>
+          <form className="form-box" onSubmit={ onSubmit } ref={ form } noValidate>
             <div className={`input-box ${pantalla<=767 ? 'w100' : 'w50'}`}>
-              <input type="text" onChange={ onChangeInput } name='nombre' value={ nombre } />
+              <input type="text" onChange={ onChangeInput } name='nombre' value={ nombre } required/>
               <span>Nombre</span>
             </div>
 
             <div className={`input-box ${pantalla<=767 ? 'w100' : 'w50'}`}>
-              <input type="text" onChange={ onChangeInput } name='apellido' value={ apellido } />
+              <input type="text" onChange={ onChangeInput } name='apellido' value={ apellido } required/>
               <span>Apellido</span>
             </div>
 
             <div className={`input-box ${pantalla<=767 ? 'w100' : 'w50'}`}>
-              <input type="text" onChange={ onChangeInput } name='email' value={ email } />
+              <input type="text" onChange={ onChangeInput } name='email' value={ email } required/>
               <span>Email</span>
             </div>
 
             <div className={`input-box ${pantalla<=767 ? 'w100' : 'w50'}`}>
-              <input type="text" onChange={ onChangeInput } name='telefono' value={ telefono } />
+              <input type="text" onChange={ onChangeInput } name='telefono' value={ telefono } required/>
               <span>Telefono</span>
             </div>
 
-            <div className="input-box w100">
-              <textarea value={ mensaje } onChange={ onChangeInput } name='mensaje'></textarea>
+            <div className="input-box w100 block">
+              <textarea value={ mensaje } onChange={ onChangeInput } name='mensaje' required></textarea>
               <span>Escribe tu mensaje...</span>
             </div>
 

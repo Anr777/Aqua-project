@@ -36,6 +36,7 @@
   h2 {
     font-size: 24px;
     font-weight: 600;
+    
   }
   
   /**? INFO */
@@ -56,6 +57,10 @@
   
   .info h2 {
     color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2rem;
   }
   
   .info-text {
@@ -165,7 +170,8 @@
   }
   
   .input-box input:focus ~ span,
-  .input-box input:valid ~ span {
+  .input-box input:valid ~ span
+ {
     transform: translateY(-20px);
     font-size: 14px;
     font-weight: 400;
@@ -174,7 +180,8 @@
   }
   
   .input-box textarea:focus ~ span,
-  .input-box textarea:valid ~ span {
+  .input-box textarea:valid ~ span
+ {
     transform: translateY(-20px);
     font-size: 14px;
     font-weight: 400;
@@ -218,7 +225,7 @@
       position: static;
       margin-top: 0;
       margin-bottom: 0;
-
+      
     }
 
     .content{
@@ -233,6 +240,13 @@
       position: initial;
       order: 2;
       width: 100%;
+      
+    }
+
+    .sociales{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
     }
 
     .info-text{
@@ -255,7 +269,7 @@
 
       padding: 0 20px;
       margin-top: 20px;
-      /* position: initial; */
+      position: initial;
     }
 
     .form{
@@ -268,11 +282,25 @@
       padding: 0;
     }
 
-    h2{
+    .form h2{
       
-      padding: 25px 10px;
-      font-size: 5rem;
+      padding: 25px 20px;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 1px;
+    }
 
+    .input-box.btn{
+
+      justify-content: center;
+      display: block
+
+    }
+
+    .input-box input[type="submit"]{
+      width: 100%;
     }
 
   }
