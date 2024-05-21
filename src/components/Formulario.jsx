@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import '../Formulario.css';
@@ -133,6 +133,22 @@ export const Formulario = () => {
 
   }
 
+  const [ pantalla, setPantalla ] = useState(window.innerWidth);
+  
+  useEffect( () => {
+
+    function changeResize() {
+      setPantalla(window.innerWidth);
+    }
+
+    window.addEventListener('resize', changeResize);
+
+    return () => {
+      removeEventListener('resize', changeResize);
+    }
+
+  }, []);
+
   return (
 
     <section>
@@ -172,22 +188,22 @@ export const Formulario = () => {
           { error && <div className='bg-red-500 text-white p-2 font-bold'> { error }  </div> }
           <h2>Comunicate con nosotros</h2>
           <form className="form-box" onSubmit={ onSubmit } ref={ form }>
-            <div className="input-box w50">
+            <div className={`input-box ${pantalla<=767 ? 'w100' : 'w50'}`}>
               <input type="text" onChange={ onChangeInput } name='nombre' value={ nombre } />
               <span>Nombre</span>
             </div>
 
-            <div className="input-box w50">
+            <div className={`input-box ${pantalla<=767 ? 'w100' : 'w50'}`}>
               <input type="text" onChange={ onChangeInput } name='apellido' value={ apellido } />
               <span>Apellido</span>
             </div>
 
-            <div className="input-box w50">
+            <div className={`input-box ${pantalla<=767 ? 'w100' : 'w50'}`}>
               <input type="text" onChange={ onChangeInput } name='email' value={ email } />
               <span>Email</span>
             </div>
 
-            <div className="input-box w50">
+            <div className={`input-box ${pantalla<=767 ? 'w100' : 'w50'}`}>
               <input type="text" onChange={ onChangeInput } name='telefono' value={ telefono } />
               <span>Telefono</span>
             </div>

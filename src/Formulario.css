@@ -32,7 +32,7 @@
     margin-top: 50px;
     margin-bottom: 50px;
   }
-  
+
   h2 {
     font-size: 24px;
     font-weight: 600;
@@ -203,4 +203,76 @@
   
   .input-box input[type="submit"]:hover {
     background: #03a9f4;
+  }
+
+  @media (max-width: 767px) {
+    
+    .container{
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      position: static;
+      margin-top: 0;
+      margin-bottom: 0;
+
+    }
+
+    .content{
+
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+    }
+
+    .info{
+      position: initial;
+      order: 2;
+      width: 100%;
+    }
+
+    .info-text{
+
+      gap: 15px;
+
+    }
+
+    section::before{
+      display: none;
+    }
+
+    section{
+
+      margin-top: 0;
+
+    }
+
+    .form-box{
+
+      padding: 0 20px;
+      margin-top: 20px;
+      /* position: initial; */
+    }
+
+    .form{
+      
+      position: initial;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-left: 0;
+      padding: 0;
+    }
+
+    h2{
+      
+      padding: 25px 10px;
+      font-size: 5rem;
+
+    }
+
   }
