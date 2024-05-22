@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
-    <footer className='Footer bg-[#d6e6f5]'>
+    <footer className='Footer'>
       <div className='Contenedor-Columnas'>
           <div className='Footer-About'>
             <img src="logo.png" alt="logo" className="w-1/2" />
@@ -27,17 +27,17 @@ const Footer = () => {
           </div>
           <div className='Footer-Contactanos'>
             <h5>Contáctanos</h5>
-            <ul className="flex flex-col max-sm:items-center">
+            <ul className="flex flex-col mt-2 max-sm:items-center">
                 <li className="flex flex-col max-sm:items-center">
                     <h5>Oficina:</h5>
-                    <p>Calle Ica #312 San Andres - Ica, Péru</p>
+                    <div className="flex items-center gap-2"><span className="fas fa-map-marker-alt"></span><p>Calle Ica #312 San Andres - Ica, Péru</p></div>
                 </li>
                 <li className="flex flex-col max-sm:items-center">
                     <h5>Tienda:</h5>
-                    <p>Calle Mogote Grande #103 San Andres - Ica, Péru</p>
+                    <div className="flex items-center gap-2"><span className="fas fa-map-marker-alt"></span><p>Calle Mogote Grande #103 San Andres - Ica, Péru</p></div>
                 </li>
-                <li><p>+51 945 319 118 / 987 654 321</p></li>
-                <li><p>ventas@aquasur.com</p></li>
+                <li className="flex items-center gap-2"><span className="fas fa-phone"></span><p>+51 945 319 118 / 987 654 321</p></li>
+                <li className="flex items-center gap-2"><span className="fas fa-envelope"></span><p>ventas@aquasur.com</p></li>
             </ul>
           </div>
       </div>

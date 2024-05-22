@@ -99,7 +99,7 @@
 
 .Navegation {
 
-  border-bottom: solid 1px #3b82f6;
+  border-bottom: solid 1px rgb(59, 130, 246);
 
   @apply flex justify-between items-center bg-white py-5 fixed left-0 top-0 w-full h-20 shadow-lg z-[999999];
 
@@ -114,7 +114,7 @@
   backdrop-filter: blur(20px);
   touch-action: none;
   font-family: 'Poppins';
-
+  
   /********/
   transition: all .5s ease;
 }
@@ -133,7 +133,7 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-
+  
   /*****/
   transition: all .5s ease;
   
@@ -201,7 +201,6 @@
 .Burger{
 
   display: block;
-  
   top: 11px;
   position: absolute;
   right: 11px;
@@ -272,8 +271,9 @@
 
 
 .Contenedor-Columnas {
-  border-top: 1px dotted black ;
-  @apply flex max-md:flex-col text-blue-400 justify-between gap-10 mx-56 md:mx-10 pt-[50px] mb-12 max-sm:flex-col max-sm:mx-8 max-sm:items-center  ;
+  border-top: 1px dotted black;
+  /* padding:0 150px; */
+  @apply flex max-md:flex-col justify-between gap-10 md:mx-[50px] pt-[50px] mb-12 max-sm:flex-col max-sm:mx-8 max-sm:items-center xl:px-[150px] ;
 }
 
 .Contenedor-Columnas h5 {
@@ -283,6 +283,8 @@
 
 .Footer{
   margin-top: 15px;
+    
+
 }
 
 .Footer-About{
@@ -290,9 +292,11 @@
   /* @apply flex max-sm:flex-col w-[30%] max-sm:w-[100%] max-sm:text-center  */
 }
 
-/* .Footer-About p {
-  @apply break-words 
-} */
+.Footer-About p{
+
+  font-weight: 200
+
+}
 
 .Footer-Servicios {
   @apply flex flex-col max-sm:items-center max-sm:justify-center
@@ -317,9 +321,9 @@
 
 .Footer-Contactanos li h5{
   font-family: 'Poppins';
-  font-size: 20px;
+  font-size: 15px;
   color: black;
-  font-weight: bold;
+  font-weight: 600;
   
 }
 
@@ -327,6 +331,14 @@
 .Footer-Informacion li a
 {
   line-height: 36px;
+  font-weight: 200;
+}
+
+.Footer-Servicios li a:hover,
+.Footer-Informacion li a:hover{
+
+  color: #3b82f6;
+
 }
 
 .Footer-Contactanos li{
@@ -335,7 +347,10 @@
 
 .Footer-Contactanos li p{
   line-height: 27px;
+  font-weight: 200
 }
+
+
 
 .Footer-Copyright {
   @apply flex justify-center text-white bg-color-1 py-5
@@ -456,6 +471,21 @@
     padding: 0;
     
     
+  }
+
+}
+
+
+@media (max-width:767px) {
+  
+  .Footer-About img{
+    width: 100%;
+  }
+
+  .Footer-About p{
+
+    display:none;
+  
   }
 
 }

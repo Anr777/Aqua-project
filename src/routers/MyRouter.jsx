@@ -17,7 +17,6 @@ const MyRouter = () => {
           <Route path='/*' element={ <Navigate to="/" />} />
         </Route>
       </Routes>
-     
     </BrowserRouter>
   )
 }
