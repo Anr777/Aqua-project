@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className='Footer'>
       <div className='Contenedor-Columnas'>
           <div className='Footer-About'>
-            <img src="logo.png" alt="logo" className="w-1/2" />
+            <img src="logo.png" alt="logo" className="w-full" />
             <p className="pt-4">Somos distribuidores exclusivos de diferentes marcas y contamos con más de 20 años de experiencia en el mercado nacional.</p>
             <p className="leading-9 pt-5">www.bidonesdeagua.com</p>
           </div>

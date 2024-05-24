@@ -13,11 +13,11 @@ import { ContainerTestimoniales } from "../components/ContainerTestimoniales"
 import Titulo from "../components/Titulo"
 import { carouselData, products } from "../data/dataEstatica"
 import { Button } from "../components/Button"
-import { Outlet } from "react-router-dom"
+import { Link, Outlet, useLocation } from "react-router-dom"
 
 
 export function Inicio() {
-
+  
   return (
     
       <div className="overflow-x-hidden pt-[130px]">
@@ -33,7 +33,7 @@ export function Inicio() {
                   <div  className='flex flex-col text-black gap-3'>
                     <h1 className='font-bold text-xl'>{data.title }</h1>
                     <p className='font-extralight Line-height'>{ data.description }</p>
-                    <Button title={ data.button } 
+                    <Button title={ data.button }
                       clases={'border border-blue-600 rounded-2xl hover:bg-blue-500 hover:text-white'} 
                     />
                   </div>
@@ -50,11 +50,18 @@ export function Inicio() {
         {/**?SECCTION DE PRODUCTOS */ }
         <Titulo titulo={ 'Nuestros Productos' } />
 
-        <IProductos data={ products } />
+        <IProductos data={ products } cantidad={2}/>
+
+        <Link to={'/productos'} className="flex justify-center mt-10 mb-[60px]">
+          <Button title={'Ir a Productos'} color={'text-white'} clases={'font-semibold mr-2 hover: hover:bg-blue-700 text-white max-sm:w-3/4 md:w-[40%] lg:w-[20%]'} text="p-2" 
+                    background={'bg-blue-500'} />
+        </Link>
 
         {/**?SECCTION DE CERTIFICACION */ }
 
-        <div style={{ maxWidth: 'none', marginLeft: 0, marginRight: 0 }}>
+        {/* style={{ maxWidth: 'none', marginLeft: 0, marginRight: 0 }} */}
+
+        <div >
           <Certificacion />
         </div>
 

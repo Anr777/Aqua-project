@@ -18,7 +18,7 @@ const Navegacion = () => {
       <div className={ `Navegation lg:px-[50px] md:px-[25px] max-md:px-[25px] ${ clicked ? 'navegation2' : '' }` }>
         <div className='Logo'>
           <Link to='/'>
-            <img src="logo.png" alt="logo" width={ '270px' } height={ '60px' } />
+            <img src="/logo.png" alt="logo" width={ '270px' } height={ '60px' } />
           </Link>
         </div>
 
