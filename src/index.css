@@ -459,9 +459,73 @@
   height: 400px;
   margin: 0 auto;
 
+}
+/******** DETALLE PRODUCTO*********/
+.detalle-producto{
 
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  max-width: 60%;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding-top: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.068) ;
+  /*0, 0, 0, 0.068*/
+
+  @apply shadow-lg rounded-sm
 
 }
+
+.img-producto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-producto img{
+
+  width: 80%;
+  height: 80%;
+  object-fit: fill;
+
+}
+
+.info-producto{
+
+  
+
+}
+
+.metodo-pago{
+
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+}
+
+@media (max-width:769px) {
+
+  .detalle-producto{
+
+    max-width: 80%;
+  
+  }  
+
+}
+
+@media (max-width:420px) {
+
+  .detalle-producto{
+
+    flex-direction: column;
+  
+  }  
+
+}
+
+/*******FIN DETALLE PRODUCTO*********/
 
 @media (max-width: 391px ){
   .Banner{
