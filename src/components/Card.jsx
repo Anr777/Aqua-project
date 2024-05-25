@@ -7,7 +7,7 @@ const Card = ({dato,cantidad}) => {
 
   return (
     
-      <div className='Card '>
+      <div className='Card'>
         <img src={img} alt="Imagen1" className='w-full flex-1 object-cover' />
         <div className='px-6 py-4'>
           <div className='font-bold text-xl mb-2 text-black uppercase'> {title} </div>

@@ -25,48 +25,60 @@ export const DetalleProducto = () => {
 
   return (
     <>
-
         <div className='detalle-producto'>
           <div className='img-producto'>
             <img src={img} alt={title}/>
           </div>
           <div className='info-producto'>
-            <div className='mb-5'>
                 <span className='uppercase'>{contenido}</span>
                 <h1 className='font-bold'>{title}</h1>
                 <div className='vendido-por' >
-                  <p>Vendido y despachado por:</p>
-                  <div>
-                    <span>marca</span>
-                    <span>nombre</span>
+                  <p className='text-sm'>Vendido y despachado por:</p>
+                  <div className='flex gap-2'>
+                    <img src="carrito.svg" alt="carrito" height={'20px'} width={'20px'}/>
+                    <span className='text-sm'>Aqua Sur</span>
                   </div>
                 </div>
                 <div className='precios'>
-                    <div><p>Precio regular: </p> <span>S/.10.00</span></div>
-                    <div><p>Precio con descuento: </p> <span>S/.5.00</span></div>
+                    <div className='flex flex-row justify-between'><p className='text-[#304165]'>Precio regular: </p> <span className='line-through text-[#7d8eb5]'>S/ 10.00</span></div>
+                    <div className='flex flex-row justify-between'><p className='text-[#304165]'>Precio con descuento: </p> <span>S/ 5.00</span></div>
                 </div>
-                <div className='descripcion'>
+                <div className='text-[#6678a1]'>
                     {descripcion}
                 </div>
-                          <div className='metodo-pago'>
-                <div>
-                  YAPE
+              <div className='metodo-pago'>
+                  <div>
+                    <img src="../yape.jpeg" alt="yape" height={'40px'} width={'40px'}/>
+                  </div>
+                  <div>
+                    <img src="../plin.jpeg" alt="plin" height={'40px'} width={'40px'}/>
+                  </div>
+                  <div>
+                    <img src="../bbva.jpg" alt="bbva" height={'40px'} width={'40px'}/>
+                  </div>
+              </div>             
+              <p className='font-semibold'>Métodos de entrega disponibles:</p>
+              <div className='font-semibold'>
+                <div className='flex flex-col'>
+                  <div className='flex gap-2'>
+                    <img src="domicilio.svg" alt="" height={'20px'} width={'20px'}/><span>Despacho a domicilio</span>
+                  </div>
+                  <p className='pl-7 text-[#29d882]'>Disponible</p>
                 </div>
-                <div>
-                  PLIN
-                </div>
-                <div>
-                  TRANSFERENCIAS
+                <div className='flex flex-col'>
+                  <div className='flex gap-2'>
+                    <img src="tienda.svg" alt="" height={'20px'} width={'20px'}/><span>Retiro en Tienda</span>
+                  </div>
+                  <p className='pl-7 text-[#29d882]'>Disponible</p>
                 </div>
               </div>
-            </div>
-          <div className='flex justify-center pb-5'>
-            <Button title='Agregar al carrito' color={'text-white'} background={'bg-blue-500'} text={'p-4'} clases={'hover: hover:bg-blue-700 text-white'}/>
-          </div>
+
+              <div className='flex justify-center py-2'>
+                <Button title='Agregar al carrito' color={'text-white'} background={'bg-blue-500'} text={'p-4'} clases={'hover: hover:bg-blue-700 text-white'}/>
+              </div>
           </div>
         </div>
-
+          
     </>
-
   )
 }
