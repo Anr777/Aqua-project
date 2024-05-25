@@ -35,7 +35,7 @@ export const DetalleProducto = () => {
                 <div className='vendido-por' >
                   <p className='text-sm'>Vendido y despachado por:</p>
                   <div className='flex gap-2'>
-                    <img src="carrito.svg" alt="carrito" height={'20px'} width={'20px'}/>
+                    <img src="../carrito.svg" alt="carrito" height={'20px'} width={'20px'}/>
                     <span className='text-sm'>Aqua Sur</span>
                   </div>
                 </div>
@@ -61,13 +61,13 @@ export const DetalleProducto = () => {
               <div className='font-semibold'>
                 <div className='flex flex-col'>
                   <div className='flex gap-2'>
-                    <img src="domicilio.svg" alt="" height={'20px'} width={'20px'}/><span>Despacho a domicilio</span>
+                    <img src="../domicilio.svg" alt="" height={'20px'} width={'20px'}/><span>Despacho a domicilio</span>
                   </div>
                   <p className='pl-7 text-[#29d882]'>Disponible</p>
                 </div>
                 <div className='flex flex-col'>
                   <div className='flex gap-2'>
-                    <img src="tienda.svg" alt="" height={'20px'} width={'20px'}/><span>Retiro en Tienda</span>
+                    <img src="../tienda.svg" alt="" height={'20px'} width={'20px'}/><span>Retiro en Tienda</span>
                   </div>
                   <p className='pl-7 text-[#29d882]'>Disponible</p>
                 </div>
