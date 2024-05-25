@@ -46,19 +46,21 @@ export const DetalleProducto = () => {
                 <div className='text-[#6678a1]'>
                     {descripcion}
                 </div>
+
+                <p className='font-semibold'>Métodos de pago:</p>
               <div className='metodo-pago'>
                   <div>
-                    <img src="../yape.jpeg" alt="yape" height={'40px'} width={'40px'}/>
+                    <img src="../yape.jpeg" alt="yape"/>
                   </div>
                   <div>
-                    <img src="../plin.jpeg" alt="plin" height={'40px'} width={'40px'}/>
+                    <img src="../plin.jpeg" alt="plin"/>
                   </div>
                   <div>
-                    <img src="../bbva.jpg" alt="bbva" height={'40px'} width={'40px'}/>
+                    <img src="../bbva.jpg" alt="bbva"/>
                   </div>
               </div>             
               <p className='font-semibold'>Métodos de entrega disponibles:</p>
-              <div className='font-semibold'>
+              <div className='flex flex-row justify-between max-sm:flex-col font-semibold'>
                 <div className='flex flex-col'>
                   <div className='flex gap-2'>
                     <img src="../domicilio.svg" alt="" height={'20px'} width={'20px'}/><span>Despacho a domicilio</span>
@@ -72,7 +74,6 @@ export const DetalleProducto = () => {
                   <p className='pl-7 text-[#29d882]'>Disponible</p>
                 </div>
               </div>
-
               <div className='flex justify-center py-2'>
                 <Button title='Agregar al carrito' color={'text-white'} background={'bg-blue-500'} text={'p-4'} clases={'hover: hover:bg-blue-700 text-white'}/>
               </div>
