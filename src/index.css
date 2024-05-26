@@ -101,7 +101,7 @@
 
   border-bottom: solid 1px rgb(59, 130, 246);
 
-  @apply flex justify-between items-center bg-white py-5 fixed left-0 top-0 w-full h-20 shadow-lg z-[999999];
+  @apply flex justify-between items-center bg-white py-5 fixed left-0 top-0 w-full h-20 shadow-lg z-[1000];
 
 }
 
@@ -429,6 +429,8 @@
   position: relative;
   background-image: url('/k.jpg');
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 600px;
   width: 100%;
   display: flex;

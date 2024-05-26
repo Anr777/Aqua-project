@@ -3,6 +3,7 @@ import { Contactos, Inicio, Nosotros, Productos } from '../pages'
 import Navegacion from '../components/Navegacion'
 import ScrollToTop from '../components/ScrollToTop'
 import { DetalleProducto } from '../components/DetalleProducto'
+import { Wasapp } from '../components/Wasapp'
 
 
 
@@ -21,6 +22,7 @@ const MyRouter = () => {
           <Route path='/*' element={ <Navigate to="/" />} />
         </Route>
       </Routes>
+      <Wasapp />
     </BrowserRouter>
   )
 }

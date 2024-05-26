@@ -8,12 +8,12 @@ import Locales from "../components/Locales"
 import Ofertas from "../components/Ofertas"
 import S_Contactos from "../components/S_Contactos"
 // import { Testimoniales } from "../components/Testimoniales"
-import {testimoniosClientes } from "../data/dataEstatica"
+import { testimoniosClientes } from "../data/dataEstatica"
 import { ContainerTestimoniales } from "../components/ContainerTestimoniales"
 import Titulo from "../components/Titulo"
 import { carouselData, products } from "../data/dataEstatica"
 import { Button } from "../components/Button"
-import { Link, Outlet, useLocation } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 
 export function Inicio() {
